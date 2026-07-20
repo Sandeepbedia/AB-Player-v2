@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg_rounded_circle">
+
+    <ImageView android:id="@+id/widget_album_art"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/album_art" />
+
+    <View android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="#66000000" />
+
+    <ImageButton android:id="@+id/widget_btn_play_pause"
+        android:layout_width="32dp" android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_widget_play"
+        android:background="@android:color/transparent"
+        android:tint="#FFFFFF"
+        android:contentDescription="@string/play_pause" />
+</FrameLayout>

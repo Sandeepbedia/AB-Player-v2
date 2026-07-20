@@ -1,0 +1,3006 @@
+{
+  "modules": [
+    {
+      "name": "ABMusic",
+      "type": "JAVA_MODULE",
+      "contentRoots": [
+        {
+          "path": "/storage/emulated/0/AndroidCSProjects/go",
+          "excludedPatterns": [
+            "build/**",
+            ".gradle/**"
+          ],
+          "excludedUrls": [],
+          "sourceRoots": [
+            {
+              "path": "/storage/emulated/0/AndroidCSProjects/go",
+              "type": "kotlin-source"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "type": "moduleSource"
+        },
+        {
+          "type": "sdk",
+          "name": "21",
+          "kind": "jdk"
+        },
+        {
+          "type": "library",
+          "name": "android-36",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "jdk-stubs",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:coil-base-2.6.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.lifecycle:lifecycle-common-java8:2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:transition-1.5.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "javax.inject:javax.inject:1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:hilt-android-2.51.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-unit-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-runtime-compose-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:savedstate-1.2.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.room:room-common:2.6.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:sqlite-framework-2.4.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:coil-compose-base-2.6.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-util-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:coordinatorlayout-1.1.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:core-splashscreen-1.0.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.constraintlayout:constraintlayout-solver:2.0.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:navigation-runtime-2.7.7",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:viewpager2-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:core-runtime-2.2.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:activity-ktx-1.9.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.guava:guava:32.1.3-android",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-geometry-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:runtime-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-viewmodel-compose-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:exifinterface-1.3.7",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.resourceinspection:resourceinspection-annotation:1.0.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:material-icons-core-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:vectordrawable-animated-1.1.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:room-ktx-2.6.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:viewpager-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:tracing-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:material-1.12.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-extractor-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:coil-compose-2.6.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:navigation-common-2.7.7",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.datastore:datastore-core-okio-jvm:1.1.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:sqlite-2.4.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-graphics-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:material-ripple-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.code.findbugs:jsr305:3.0.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:foundation-layout-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:hilt-navigation-compose-1.2.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.dagger:dagger:2.51.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:core-ktx-1.13.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:localbroadcastmanager-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-runtime-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:navigation-compose-2.7.7",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-datasource-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:dynamicanimation-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:print-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-tooling-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:material3-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.lifecycle:lifecycle-common-jvm:2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:cursoradapter-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.datastore:datastore-preferences-core-jvm:1.1.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:legacy-support-core-utils-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:appcompat-1.6.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-livedata-core-2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.9.22",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-container-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-decoder-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:versionedparcelable-1.1.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:activity-1.9.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:runtime-saveable-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:startup-runtime-1.1.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:animation-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlin:kotlin-parcelize-runtime:1.9.22",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.annotation:annotation-jvm:1.8.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:hilt-navigation-1.2.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:constraintlayout-2.0.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:animation-core-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-process-2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:interpolator-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-common-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlin:kotlin-stdlib:1.9.24",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:datastore-preferences-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:navigation-common-ktx-2.7.7",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-viewmodel-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:dagger-lint-aar-2.51.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains:annotations:23.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:vectordrawable-1.1.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.collection:collection-ktx:1.4.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:recyclerview-1.3.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media-1.7.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:material-icons-extended-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-runtime-ktx-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:drawerlayout-1.1.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-database-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-exoplayer-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:cardview-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.arch.core:core-common:2.2.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:datastore-core-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.dagger:hilt-core:2.51.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.guava:failureaccess:1.0.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:annotation-experimental-1.4.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:profileinstaller-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:coil-2.6.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-viewmodel-ktx-2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.errorprone:error_prone_annotations:2.15.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-livedata-core-ktx-2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:room-runtime-2.6.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:customview-poolingcontainer-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:datastore-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:palette-ktx-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.collection:collection-jvm:1.4.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-text-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:coil-video-2.6.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-viewmodel-savedstate-2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:navigation-runtime-ktx-2.7.7",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.concurrent:concurrent-futures:1.1.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:emoji2-1.3.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:emoji2-1.3.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:core-1.13.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:activity-compose-1.9.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-session-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:savedstate-ktx-1.2.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-tooling-data-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:foundation-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:emoji2-views-helper-1.3.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.squareup.okhttp3:okhttp:4.12.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:loader-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:autofill-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:material-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:accompanist-drawablepainter-0.32.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-livedata-2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:palette-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.squareup.okio:okio-jvm:3.8.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:fragment-1.5.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-ui-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:customview-1.1.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-tooling-preview-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:appcompat-resources-1.6.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:documentfile-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "compile_and_runtime_not_namespaced_r_class_jar:debug:processDebugResources:R",
+          "scope": "compile"
+        }
+      ]
+    },
+    {
+      "name": "app",
+      "type": "JAVA_MODULE",
+      "contentRoots": [
+        {
+          "path": "/storage/emulated/0/AndroidCSProjects/go/app",
+          "excludedPatterns": [
+            "build/**",
+            ".gradle/**"
+          ],
+          "excludedUrls": [],
+          "sourceRoots": [
+            {
+              "path": "/storage/emulated/0/AndroidCSProjects/go/app/src/main/kotlin",
+              "type": "kotlin-source"
+            }
+          ]
+        },
+        {
+          "path": "/storage/emulated/0/AndroidCSProjects/go/app/src/main/kotlin",
+          "excludedPatterns": [],
+          "excludedUrls": [],
+          "sourceRoots": [
+            {
+              "path": "/storage/emulated/0/AndroidCSProjects/go/app/src/main/kotlin",
+              "type": "kotlin-source"
+            }
+          ]
+        },
+        {
+          "path": "/storage/emulated/0/AndroidCSProjects/go/app/build/generated/ap_generated_sources/debug/out",
+          "excludedPatterns": [],
+          "excludedUrls": [],
+          "sourceRoots": [
+            {
+              "path": "/storage/emulated/0/AndroidCSProjects/go/app/build/generated/ap_generated_sources/debug/out",
+              "type": "java-source"
+            }
+          ]
+        },
+        {
+          "path": "/storage/emulated/0/AndroidCSProjects/go/app/build/generated/ksp/debug",
+          "excludedPatterns": [],
+          "excludedUrls": [],
+          "sourceRoots": [
+            {
+              "path": "/storage/emulated/0/AndroidCSProjects/go/app/build/generated/ksp/debug",
+              "type": "kotlin-source"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "type": "moduleSource"
+        },
+        {
+          "type": "sdk",
+          "name": "21",
+          "kind": "jdk"
+        },
+        {
+          "type": "library",
+          "name": "android-36",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "jdk-stubs",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:coil-base-2.6.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.lifecycle:lifecycle-common-java8:2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:transition-1.5.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "javax.inject:javax.inject:1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:hilt-android-2.51.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-unit-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-runtime-compose-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:savedstate-1.2.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.room:room-common:2.6.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:sqlite-framework-2.4.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:coil-compose-base-2.6.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-util-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:coordinatorlayout-1.1.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:core-splashscreen-1.0.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.constraintlayout:constraintlayout-solver:2.0.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:navigation-runtime-2.7.7",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:viewpager2-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:core-runtime-2.2.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:activity-ktx-1.9.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.guava:guava:32.1.3-android",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-geometry-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:runtime-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-viewmodel-compose-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:exifinterface-1.3.7",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.resourceinspection:resourceinspection-annotation:1.0.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:material-icons-core-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:vectordrawable-animated-1.1.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:room-ktx-2.6.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:viewpager-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:tracing-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:material-1.12.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-extractor-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:coil-compose-2.6.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:navigation-common-2.7.7",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.datastore:datastore-core-okio-jvm:1.1.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:sqlite-2.4.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-graphics-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:material-ripple-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.code.findbugs:jsr305:3.0.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:foundation-layout-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:hilt-navigation-compose-1.2.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.dagger:dagger:2.51.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:core-ktx-1.13.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:localbroadcastmanager-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-runtime-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:navigation-compose-2.7.7",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-datasource-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:dynamicanimation-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:print-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-tooling-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:material3-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.lifecycle:lifecycle-common-jvm:2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:cursoradapter-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.datastore:datastore-preferences-core-jvm:1.1.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:legacy-support-core-utils-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:appcompat-1.6.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-livedata-core-2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.9.22",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-container-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-decoder-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:versionedparcelable-1.1.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:activity-1.9.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:runtime-saveable-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:startup-runtime-1.1.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:animation-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlin:kotlin-parcelize-runtime:1.9.22",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.annotation:annotation-jvm:1.8.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:hilt-navigation-1.2.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:constraintlayout-2.0.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:animation-core-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-process-2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:interpolator-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-common-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlin:kotlin-stdlib:1.9.24",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:datastore-preferences-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:navigation-common-ktx-2.7.7",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-viewmodel-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:dagger-lint-aar-2.51.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains:annotations:23.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:vectordrawable-1.1.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.collection:collection-ktx:1.4.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:recyclerview-1.3.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media-1.7.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:material-icons-extended-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-runtime-ktx-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:drawerlayout-1.1.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-database-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-exoplayer-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:cardview-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.arch.core:core-common:2.2.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:datastore-core-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.dagger:hilt-core:2.51.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.guava:failureaccess:1.0.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:annotation-experimental-1.4.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:profileinstaller-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:coil-2.6.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-viewmodel-ktx-2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.google.errorprone:error_prone_annotations:2.15.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-livedata-core-ktx-2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:room-runtime-2.6.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:customview-poolingcontainer-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:datastore-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:palette-ktx-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.collection:collection-jvm:1.4.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-text-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:coil-video-2.6.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-viewmodel-savedstate-2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:navigation-runtime-ktx-2.7.7",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "androidx.concurrent:concurrent-futures:1.1.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:emoji2-1.3.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:emoji2-1.3.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:core-1.13.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:activity-compose-1.9.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-session-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:savedstate-ktx-1.2.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-tooling-data-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:foundation-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:emoji2-views-helper-1.3.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.squareup.okhttp3:okhttp:4.12.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:loader-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:autofill-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:material-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:accompanist-drawablepainter-0.32.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:lifecycle-livedata-2.8.2",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:palette-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "com.squareup.okio:okio-jvm:3.8.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:fragment-1.5.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:media3-ui-1.3.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:customview-1.1.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:ui-tooling-preview-release",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:appcompat-resources-1.6.1",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "aar:documentfile-1.0.0",
+          "scope": "compile"
+        },
+        {
+          "type": "library",
+          "name": "compile_and_runtime_not_namespaced_r_class_jar:debug:processDebugResources:R",
+          "scope": "compile"
+        }
+      ]
+    }
+  ],
+  "libraries": [
+    {
+      "name": "android-36",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/Android/Sdk/platforms/android-36/android.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "jdk-stubs",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/lsp/jdk-stubs.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:coil-base-2.6.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/5f0dfcc76691472fa8c85e2ba108d529/transformed/coil-base-2.6.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "androidx.lifecycle:lifecycle-common-java8:2.8.2",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.8.2/2ad14aed781c4a73ed4dbb421966d408a0a06686/lifecycle-common-java8-2.8.2.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:transition-1.5.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/1c0b27d1b263184b117768b05f8bed32/transformed/transition-1.5.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "javax.inject:javax.inject:1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:hilt-android-2.51.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/c7599eb6156376fe853ec9492389ad91/transformed/hilt-android-2.51.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:ui-unit-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/0125ccf4e45ff0b3592de8165d05b2c9/transformed/ui-unit-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:lifecycle-runtime-compose-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/d91575d341dee6680f425fb0127e16ad/transformed/lifecycle-runtime-compose-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:savedstate-1.2.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/b32e9b338d22ec5e17cfed7d534929ce/transformed/savedstate-1.2.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "androidx.room:room-common:2.6.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/androidx.room/room-common/2.6.1/ff1b9580850a9b7eef56554e356628d225785265/room-common-2.6.1.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:sqlite-framework-2.4.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/ad83d65a607d8b0f63edb2b4bee791bc/transformed/sqlite-framework-2.4.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:coil-compose-base-2.6.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/27cb3290e4eda42be7e77805705d897e/transformed/coil-compose-base-2.6.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:ui-util-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/3d046b1d3578496fbfa33d9f67496983/transformed/ui-util-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:coordinatorlayout-1.1.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/4b366bb472aba6dd332830d98418804e/transformed/coordinatorlayout-1.1.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:core-splashscreen-1.0.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/1e50af6322d43f1a9de08efce7680dd4/transformed/core-splashscreen-1.0.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "androidx.constraintlayout:constraintlayout-solver:2.0.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout-solver/2.0.1/30988fe2d77f3fe3bf7551bb8a8b795fad7e7226/constraintlayout-solver-2.0.1.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:navigation-runtime-2.7.7",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/b785ca8a2c5f59029e234a064244248e/transformed/navigation-runtime-2.7.7/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:viewpager2-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/4d41e574bd12165d8aecb54b24e63af9/transformed/viewpager2-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:core-runtime-2.2.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/1bf7ee3888a090f39d1a63e0f7de62c8/transformed/core-runtime-2.2.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.9.0/f320478990d05e0cfaadd74f9619fd6027adbf37/kotlin-stdlib-jdk7-1.9.0.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:activity-ktx-1.9.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/81d100fb0db6edbe2a0f72b02fc8d45b/transformed/activity-ktx-1.9.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "com.google.guava:guava:32.1.3-android",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/32.1.3-android/ea090dd85ca2fa12d42d054369df888665230dd7/guava-32.1.3-android.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:ui-geometry-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/3fcd4c69c9a8c37385dd1acdf8433b9c/transformed/ui-geometry-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:runtime-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/b7a1b6c38c369b41309a30093a43e656/transformed/runtime-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:lifecycle-viewmodel-compose-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/b8beaffd2defe9b01c8397f3ae648883/transformed/lifecycle-viewmodel-compose-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.8.1/bb0e192bd7c2b6b8217440d36e9758e377e450/kotlinx-coroutines-core-jvm-1.8.1.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:exifinterface-1.3.7",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/1968db885bb976803b4e47741eed661a/transformed/exifinterface-1.3.7/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "androidx.resourceinspection:resourceinspection-annotation:1.0.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/androidx.resourceinspection/resourceinspection-annotation/1.0.1/8c21f8ff5d96d5d52c948707f7e4d6ca6773feef/resourceinspection-annotation-1.0.1.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:material-icons-core-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/3a5edc113ccd6df109ee7b93d33d81cd/transformed/material-icons-core-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:vectordrawable-animated-1.1.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/086e957dad798dcead69adfd54f86e67/transformed/vectordrawable-animated-1.1.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:room-ktx-2.6.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/ef460fc682719d03db83264dd218991f/transformed/room-ktx-2.6.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:viewpager-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/f80e8f86cce254895e61a02147ef406f/transformed/viewpager-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:tracing-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/b63fca0c705cb772adf67e703231ea8f/transformed/tracing-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:material-1.12.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/c32f49d7d2a9cb254058d04e2f25d471/transformed/material-1.12.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:media3-extractor-1.3.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/4b2ac180445c6482e90be2ab7d589b98/transformed/media3-extractor-1.3.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:coil-compose-2.6.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/0b3d45e3f71a212f1ffcb793f4408576/transformed/coil-compose-2.6.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:navigation-common-2.7.7",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/ad5aaf23ec4a347f0033cdd05d936d9e/transformed/navigation-common-2.7.7/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "androidx.datastore:datastore-core-okio-jvm:1.1.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-core-okio-jvm/1.1.1/cba5887aaa9316d650b3ebc667243ed3a05f4407/datastore-core-okio-jvm-1.1.1.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:sqlite-2.4.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/692edcc43f957f610467ea59015549b7/transformed/sqlite-2.4.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:ui-graphics-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/4cf97d4b85d7205ee322137f53a55685/transformed/ui-graphics-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:material-ripple-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/ec726d8c8f2dfd523ab91e67cf935c4f/transformed/material-ripple-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "com.google.code.findbugs:jsr305:3.0.2",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:foundation-layout-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/9a15b4472c599636e23caa37a3f414c5/transformed/foundation-layout-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:hilt-navigation-compose-1.2.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/04e92dbe31b361a29003b22421ac775b/transformed/hilt-navigation-compose-1.2.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "com.google.dagger:dagger:2.51.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger/2.51.1/48cb41ae824574a5c5f961e45c833650bf19c956/dagger-2.51.1.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:core-ktx-1.13.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/cde81915ec3e8c4cdc86b36f16d7b45f/transformed/core-ktx-1.13.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:localbroadcastmanager-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/74977fba0ed8d8cb1625d1a681c7caf5/transformed/localbroadcastmanager-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:lifecycle-runtime-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/491313000890021565e3bd531cc1d26f/transformed/lifecycle-runtime-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:navigation-compose-2.7.7",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/64fe24f7f80793922d8197fbf5ebcfbf/transformed/navigation-compose-2.7.7/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:media3-datasource-1.3.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/74c5be4c2de1721e11bd20abe7e9c75e/transformed/media3-datasource-1.3.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:dynamicanimation-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/82ff3b691fb52c7a19a42851e64412f5/transformed/dynamicanimation-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:print-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/ef8dcc0f2fcfc825ecd56fd10d1d7a90/transformed/print-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:ui-tooling-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/f99a7862f674ced7e55e0d67bd0aa677/transformed/ui-tooling-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:material3-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/0f2b9dadf76dc336e4c782bffcacb02d/transformed/material3-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "androidx.lifecycle:lifecycle-common-jvm:2.8.2",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-jvm/2.8.2/7174a594afb73a9ad9ac9074ce78b94af3cc52a7/lifecycle-common-jvm-2.8.2.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:cursoradapter-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/adf7ef854057a99400de34ea9ee61c6e/transformed/cursoradapter-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "androidx.datastore:datastore-preferences-core-jvm:1.1.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-preferences-core-jvm/1.1.1/e562d4a944240c0e67317f0b862da24aca3aabc/datastore-preferences-core-jvm-1.1.1.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:legacy-support-core-utils-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/c2d4c819b7b0b8ee89b7a6f0fd91f15f/transformed/legacy-support-core-utils-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:appcompat-1.6.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/9f89565c3dcf640303abb76ee66baddb/transformed/appcompat-1.6.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:lifecycle-livedata-core-2.8.2",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/2f6ba14b42186deb54015d8a3e23b3a2/transformed/lifecycle-livedata-core-2.8.2/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.9.22",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions-runtime/1.9.22/ee3bc0c3b55cb516ac92d6a093e1b939166b86a2/kotlin-android-extensions-runtime-1.9.22.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:media3-container-1.3.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/89bda93b769b7759b70a049303d4f80c/transformed/media3-container-1.3.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:media3-decoder-1.3.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/97da60c4fb4a4da229e1ed28441f4f60/transformed/media3-decoder-1.3.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:versionedparcelable-1.1.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/0f96f7197b573110f33131a9d3fcfe4c/transformed/versionedparcelable-1.1.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:activity-1.9.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/0c5fbb41fdaeca35f78cf2a913def418/transformed/activity-1.9.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:ui-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/5a613402409f3360173d37ff81582441/transformed/ui-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:runtime-saveable-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/99cccd06264691de6f6941216fe7583c/transformed/runtime-saveable-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:startup-runtime-1.1.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/016f501adf9a821e6a6cecdb5ba7df7c/transformed/startup-runtime-1.1.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:animation-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/9d2af897cb8f2f58c5e7ce70f3f48bad/transformed/animation-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-parcelize-runtime:1.9.22",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-parcelize-runtime/1.9.22/de4a21d6560cadd035c69ba3af3ad1afecc95299/kotlin-parcelize-runtime-1.9.22.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "androidx.annotation:annotation-jvm:1.8.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation-jvm/1.8.0/b8a16fe526014b7941c1debaccaf9c5153692dbb/annotation-jvm-1.8.0.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:hilt-navigation-1.2.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/027b4680eda2c30fe427862ca5a506e1/transformed/hilt-navigation-1.2.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:constraintlayout-2.0.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/acf2a45c55c798e8f8c28d616cc2b603/transformed/constraintlayout-2.0.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:animation-core-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/33ab7a418d06e166568ac9887b12c006/transformed/animation-core-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:lifecycle-process-2.8.2",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/07fa811a647db2c1f4a7ffda86e23efa/transformed/lifecycle-process-2.8.2/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:interpolator-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/6221a181f749dd045de0bd3db1e5812b/transformed/interpolator-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:media3-common-1.3.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/7f7c25d3e0fa3b5d1141aab88f0a4270/transformed/media3-common-1.3.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib:1.9.24",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.24/9928532f12c66ad816a625b3f9984f8368ca6d2b/kotlin-stdlib-1.9.24.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:datastore-preferences-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/0c0a0cff143379522d0a3b901c9fd395/transformed/datastore-preferences-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:navigation-common-ktx-2.7.7",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/218a8f6ffbdc33a7e95ca3acaed93476/transformed/navigation-common-ktx-2.7.7/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:lifecycle-viewmodel-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/fa2d2d20a40d35e52c69cc474555a0d8/transformed/lifecycle-viewmodel-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:dagger-lint-aar-2.51.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/12a594e021cdb96b976b66efeffce1ef/transformed/dagger-lint-aar-2.51.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains:annotations:23.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/23.0.0/8cc20c07506ec18e0834947b84a864bfc094484e/annotations-23.0.0.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:vectordrawable-1.1.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/e00ce526fa829cea64640b8cbf3a0218/transformed/vectordrawable-1.1.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "androidx.collection:collection-ktx:1.4.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/androidx.collection/collection-ktx/1.4.0/2ad14aed781c4a73ed4dbb421966d408a0a06686/collection-ktx-1.4.0.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:recyclerview-1.3.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/a35df86e9a758052af538dcedb8b0d58/transformed/recyclerview-1.3.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:media-1.7.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/b1ad16c76c7fda0ab9591a558a3be3eb/transformed/media-1.7.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:material-icons-extended-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/8d5e34d9f0ad8621efa2d77581f36e13/transformed/material-icons-extended-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:lifecycle-runtime-ktx-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/606d12849d0cee38edfb4b5341bb35aa/transformed/lifecycle-runtime-ktx-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:drawerlayout-1.1.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/ea37e09da69080d0cba8c9cae637c1aa/transformed/drawerlayout-1.1.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:media3-database-1.3.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/41bd85c0250334cd5c57db7fee009bc3/transformed/media3-database-1.3.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:media3-exoplayer-1.3.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/5ace2471fd9ff9e09c342876b649b39d/transformed/media3-exoplayer-1.3.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:cardview-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/6fd5b50805b01166f9340e43b946afc1/transformed/cardview-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "androidx.arch.core:core-common:2.2.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.2.0/5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3/core-common-2.2.0.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:datastore-core-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/3fbdd9dd3e1ff488a17ca535dc58113b/transformed/datastore-core-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "com.google.dagger:hilt-core:2.51.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/com.google.dagger/hilt-core/2.51.1/ea893fd757e1c12c960441c1a9056b13bf07d8f1/hilt-core-2.51.1.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "com.google.guava:failureaccess:1.0.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:annotation-experimental-1.4.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/157b9c9c6d00b0ebe9a752dfc3ee9a77/transformed/annotation-experimental-1.4.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:profileinstaller-1.3.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/7d20a12624e31568eaf4c76f1d1d6721/transformed/profileinstaller-1.3.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:coil-2.6.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/e7e873622754cb0860ff7730658ead4d/transformed/coil-2.6.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:lifecycle-viewmodel-ktx-2.8.2",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/6f9068e1b4a414dea936072779c776a5/transformed/lifecycle-viewmodel-ktx-2.8.2/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "com.google.errorprone:error_prone_annotations:2.15.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.15.0/38c8485a652f808c8c149150da4e5c2b0bd17f9a/error_prone_annotations-2.15.0.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:lifecycle-livedata-core-ktx-2.8.2",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/9dedeef2ba9491452137a3a5b5378c14/transformed/lifecycle-livedata-core-ktx-2.8.2/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:room-runtime-2.6.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/de125550a437367eafc8cc9c4f6c5d72/transformed/room-runtime-2.6.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:customview-poolingcontainer-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/132d2a7dcfd35425d3ecb56b6ee3d232/transformed/customview-poolingcontainer-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:datastore-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/cd5c3f9d2621cf28df754dad4fbf05b2/transformed/datastore-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:palette-ktx-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/3d5f1737086d3451f17ffbedc8050904/transformed/palette-ktx-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "androidx.collection:collection-jvm:1.4.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/androidx.collection/collection-jvm/1.4.0/e209fb7bd1183032f55a0408121c6251a81acb49/collection-jvm-1.4.0.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:ui-text-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/093b15f6fbf12a2ff92bff1031ccb998/transformed/ui-text-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:coil-video-2.6.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/cb05a2d08846f75cd9e5a5a0bcc4edaf/transformed/coil-video-2.6.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:lifecycle-viewmodel-savedstate-2.8.2",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/bf5ee8d00f8911ad2b5112831162b2ae/transformed/lifecycle-viewmodel-savedstate-2.8.2/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:navigation-runtime-ktx-2.7.7",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/3289ffdd37caeeb4c8a7a09fc0f482a3/transformed/navigation-runtime-ktx-2.7.7/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "androidx.concurrent:concurrent-futures:1.1.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/androidx.concurrent/concurrent-futures/1.1.0/50b7fb98350d5f42a4e49704b03278542293ba48/concurrent-futures-1.1.0.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:emoji2-1.3.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/44198d85fd22d1ce194ec08c9c7933bf/transformed/emoji2-1.3.0/jars/classes.jar",
+          "type": "CLASSES"
+        },
+        {
+          "path": "/home/.gradle/caches/transforms-4/44198d85fd22d1ce194ec08c9c7933bf/transformed/emoji2-1.3.0/jars/libs/repackaged.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-android/1.8.1/73e2acdd18df99dd4849d99f188dff529fc0afe0/kotlinx-coroutines-android-1.8.1.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:core-1.13.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/fb6709b53021daa6312a096d869b4247/transformed/core-1.13.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:activity-compose-1.9.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/fee7509b45e36663d1466dfb97806107/transformed/activity-compose-1.9.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:media3-session-1.3.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/8f494ca0071faa394eaeff2c2cdb6c47/transformed/media3-session-1.3.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:savedstate-ktx-1.2.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/03c163332bc377783e8f112fa6d8b3f6/transformed/savedstate-ktx-1.2.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.9.0/e000bd084353d84c9e888f6fb341dc1f5b79d948/kotlin-stdlib-jdk8-1.9.0.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:ui-tooling-data-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/d1c637f79bea416f8ec35f1007546dee/transformed/ui-tooling-data-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:foundation-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/e98d5632308acc2639f3a57443e6e065/transformed/foundation-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:emoji2-views-helper-1.3.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/46502d582058a3c85220913f5bd68349/transformed/emoji2-views-helper-1.3.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "com.squareup.okhttp3:okhttp:4.12.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/4.12.0/2f4525d4a200e97e1b87449c2cd9bd2e25b7e8cd/okhttp-4.12.0.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:loader-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/a3b6834e7968d361e7a2a3082c3fdf55/transformed/loader-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:autofill-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/99e520108684553f7a0aaf0bc4bfe5e7/transformed/autofill-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:material-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/be5cec8a6f1f61a73306efb396989cc1/transformed/material-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:accompanist-drawablepainter-0.32.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/d859d1ed0d72ad5ff8eea865cc72fc58/transformed/accompanist-drawablepainter-0.32.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:lifecycle-livedata-2.8.2",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/b1e65eea3296f08d6fadf4e86a7133bd/transformed/lifecycle-livedata-2.8.2/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:palette-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/a422cb59be93cc99b4c646a322dba468/transformed/palette-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "com.squareup.okio:okio-jvm:3.8.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio-jvm/3.8.0/856593a7eb4dc94f9fe27b4a4d14624a8db9ffa7/okio-jvm-3.8.0.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:fragment-1.5.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/d88d8b9b77579ee01b845365572c9693/transformed/fragment-1.5.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:media3-ui-1.3.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/de554855d965afcd7731891e39da0a20/transformed/media3-ui-1.3.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:customview-1.1.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/3e3aea7bc363c993c3657255062eaf06/transformed/customview-1.1.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:ui-tooling-preview-release",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/8d089c5b198a48f3c5a4aa964f2353b1/transformed/ui-tooling-preview-release/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:appcompat-resources-1.6.1",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/9692895d91a6f5757c121eb0267d73eb/transformed/appcompat-resources-1.6.1/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "aar:documentfile-1.0.0",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/home/.gradle/caches/transforms-4/c09b9465fd345786e928f52f9b0229b2/transformed/documentfile-1.0.0/jars/classes.jar",
+          "type": "CLASSES"
+        }
+      ]
+    },
+    {
+      "name": "compile_and_runtime_not_namespaced_r_class_jar:debug:processDebugResources:R",
+      "type": "COMPILE",
+      "roots": [
+        {
+          "path": "/storage/emulated/0/AndroidCSProjects/go/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar",
+          "type": "CLASSES"
+        }
+      ]
+    }
+  ],
+  "sdks": [
+    {
+      "name": "21",
+      "type": "jdk",
+      "version": "JDK_21",
+      "homePath": "/opt/temurin/current",
+      "roots": [
+        {
+          "url": "jar:///home/lsp/jdk-stubs.jar!/",
+          "type": "CLASSES"
+        }
+      ],
+      "additionalData": ""
+    }
+  ],
+  "kotlinSettings": [
+    {
+      "name": "ABMusic",
+      "module": "ABMusic",
+      "useProjectSettings": false,
+      "sourceRoots": [],
+      "configFileItems": [],
+      "implementedModuleNames": [],
+      "dependsOnModuleNames": [],
+      "additionalVisibleModuleNames": [],
+      "productionOutputPath": null,
+      "testOutputPath": null,
+      "sourceSetNames": [],
+      "isTestModule": false,
+      "externalProjectId": "",
+      "isHmppEnabled": false,
+      "pureKotlinSourceFolders": [],
+      "kind": "default",
+      "compilerArguments": "J{\"pluginClasspaths\":[\"/home/acslab/lsp/kotlin/lib/kotlin-compose-compiler-plugin-embeddable-2.3.0.jar\"]}",
+      "additionalArguments": null,
+      "scriptTemplates": null,
+      "scriptTemplatesClasspath": null,
+      "copyJsLibraryFiles": false,
+      "outputDirectoryForJsLibraryFiles": null,
+      "targetPlatform": null,
+      "externalSystemRunTasks": [],
+      "version": 1,
+      "flushNeeded": false
+    },
+    {
+      "name": "app",
+      "module": "app",
+      "useProjectSettings": false,
+      "sourceRoots": [],
+      "configFileItems": [],
+      "implementedModuleNames": [],
+      "dependsOnModuleNames": [],
+      "additionalVisibleModuleNames": [],
+      "productionOutputPath": null,
+      "testOutputPath": null,
+      "sourceSetNames": [],
+      "isTestModule": false,
+      "externalProjectId": "",
+      "isHmppEnabled": false,
+      "pureKotlinSourceFolders": [],
+      "kind": "default",
+      "compilerArguments": "J{\"pluginClasspaths\":[\"/home/acslab/lsp/kotlin/lib/kotlin-compose-compiler-plugin-embeddable-2.3.0.jar\"]}",
+      "additionalArguments": null,
+      "scriptTemplates": null,
+      "scriptTemplatesClasspath": null,
+      "copyJsLibraryFiles": false,
+      "outputDirectoryForJsLibraryFiles": null,
+      "targetPlatform": null,
+      "externalSystemRunTasks": [],
+      "version": 1,
+      "flushNeeded": false
+    }
+  ],
+  "javaSettings": [
+    {
+      "module": "ABMusic",
+      "inheritedCompilerOutput": false,
+      "excludeOutput": false,
+      "compilerOutput": null,
+      "compilerOutputForTests": null,
+      "languageLevelId": "JDK_21",
+      "manifestAttributes": {}
+    },
+    {
+      "module": "app",
+      "inheritedCompilerOutput": false,
+      "excludeOutput": false,
+      "compilerOutput": null,
+      "compilerOutputForTests": null,
+      "languageLevelId": "JDK_17",
+      "manifestAttributes": {}
+    }
+  ]
+}
