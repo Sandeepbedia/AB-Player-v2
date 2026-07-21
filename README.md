@@ -66,7 +66,27 @@ AB Player is a fast, beautiful music and video player for Android. It plays all 
 
 Or open **Settings > Check Updates** inside the app.
 
----
+## 📸 Screenshots
+
+<div align="center">
+
+| Home | Now Playing |
+|:----:|:-----------:|
+| <img src="screenshots/1.home.png" width="250" alt="Home"/> | <img src="screenshots/2.now%20playing.png" width="250" alt="Now Playing"/> |
+
+| Lyrics | Video |
+|:------:|:-----:|
+| <img src="screenshots/3.lyrics.png" width="250" alt="Lyrics"/> | <img src="screenshots/4.video.png" width="250" alt="Video"/> |
+
+| Video Player | Explore |
+|:------------:|:-------:|
+| <img src="screenshots/5.Video%20player.png" width="250" alt="Video Player"/> | <img src="screenshots/6%20explore.png" width="250" alt="Explore"/> |
+
+| Favorites | Settings |
+|:---------:|:--------:|
+| <img src="screenshots/7%20favorits.png" width="250" alt="Favorites"/> | <img src="screenshots/8%20settings.png" width="250" alt="Settings"/> |
+
+</div>
 
 ---
 
