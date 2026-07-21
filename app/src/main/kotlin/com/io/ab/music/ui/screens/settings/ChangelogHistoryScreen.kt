@@ -25,6 +25,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import org.json.JSONArray
 import org.json.JSONObject
 import java.net.URL
 import com.io.ab.music.ui.components.SwipeDismissWrapper
@@ -46,7 +47,7 @@ private sealed class ChangelogState {
 }
 
 private const val CHANGELOG_URL =
-    "https://raw.githubusercontent.com/Sandeepbedia/AB-Player/refs/heads/main/Changelog-history.json"
+    "https://raw.githubusercontent.com/Sandeepbedia/AB-Player-v2/refs/heads/main/Changelog-history.json"
 
 // PERF FIX: this screen used to hit the network with java.net.URL.readText() and
 // NO timeout set (URLConnection defaults to an infinite timeout) on every single
@@ -361,9 +362,23 @@ private fun VersionCard(version: VersionEntry, isLatest: Boolean) {
 }
 
 // ── Parser ────────────────────────────────────────────────────────────────────
+// FIX: "GitHub raw link changed, app me trigger nahi ho raha" — the real
+// Changelog-history.json on GitHub is a plain JSON ARRAY at the root
+// (`[ {...}, {...} ]`) using "version" (string) and "versionCode" (STRING,
+// e.g. "421") keys. This parser used to do `JSONObject(json)` expecting an
+// OBJECT wrapper (`{ "versions": [...] }`) with "version_name" / "version_code"
+// (int) keys instead. JSONObject(json) throws immediately on a string that
+// starts with '[' — so every single fetch landed in the catch block and the
+// screen always showed "Couldn't load changelog", no matter how many times
+// the file was updated on GitHub. Now parses the real array shape directly
+// (falling back to the old wrapped-object shape too, just in case).
 private fun parseChangelog(json: String): List<VersionEntry> {
-    val root     = JSONObject(json)
-    val arr      = root.optJSONArray("versions") ?: return emptyList()
+    val trimmed = json.trim()
+    val arr = if (trimmed.startsWith("[")) {
+        JSONArray(trimmed)
+    } else {
+        JSONObject(trimmed).optJSONArray("versions") ?: JSONArray()
+    }
     val versions = mutableListOf<VersionEntry>()
     for (i in 0 until arr.length()) {
         val obj     = arr.getJSONObject(i)
@@ -374,8 +389,11 @@ private fun parseChangelog(json: String): List<VersionEntry> {
         }
         versions.add(
             VersionEntry(
-                versionName = obj.optString("version_name", "?"),
-                versionCode = obj.optInt("version_code", 0),
+                versionName = obj.optString("version", obj.optString("version_name", "?")),
+                // "versionCode" in the real file is a STRING ("421"), not an int —
+                // try that first, fall back to the old int key for the other shape.
+                versionCode = obj.optString("versionCode", "").toIntOrNull()
+                                ?: obj.optInt("version_code", 0),
                 date        = obj.optString("date", ""),
                 changes     = changes
             )

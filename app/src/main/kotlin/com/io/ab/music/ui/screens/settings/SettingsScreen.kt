@@ -186,7 +186,7 @@ fun SettingsScreen(
                                 color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.75f)
                             )
                             Text(
-                                "Version 2.7.2 (Codename 422)",
+                                "Version 2.7.5 (Codename 425)",
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.55f)
                             )
@@ -433,7 +433,7 @@ fun SettingsScreen(
                 SettingsItem(
                     icon     = Icons.Rounded.Info,
                     label    = "Version",
-                    sublabel = "2.7.2 (Codename 422)",
+                    sublabel = "2.7.5 (Codename 425)",
                     onClick  = {}
                 )
             }

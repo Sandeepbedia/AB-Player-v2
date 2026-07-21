@@ -56,11 +56,24 @@ fun Modifier.guardPagerScroll(): Modifier = composed {
                     val event = awaitPointerEvent(pass = PointerEventPass.Main)
                     event.changes.forEach { change ->
                         if (change.pressed && change.positionChange() != Offset.Zero) {
-                            // The row itself (a deeper node) already had its
-                            // turn earlier in this same Main-pass dispatch —
-                            // consuming here only stops it from bubbling
-                            // further up to the tab Pager.
-                            change.consume()
+                            // FIX: this used to consume ANY leftover movement
+                            // here — horizontal AND vertical — which meant
+                            // starting a vertical scroll with a finger down on
+                            // one of these card rows swallowed that vertical
+                            // drag too, so the page underneath couldn't be
+                            // scrolled down while touching a card. Only guard
+                            // the horizontal axis (the one that actually
+                            // conflicts with the outer Pager's swipe); let a
+                            // predominantly-vertical drag pass through
+                            // untouched so the page keeps scrolling normally.
+                            val (dx, dy) = change.positionChange()
+                            if (kotlin.math.abs(dx) > kotlin.math.abs(dy)) {
+                                // The row itself (a deeper node) already had
+                                // its turn earlier in this same Main-pass
+                                // dispatch — consuming here only stops it from
+                                // bubbling further up to the tab Pager.
+                                change.consume()
+                            }
                         }
                     }
                     pressed = event.changes.any { it.pressed }

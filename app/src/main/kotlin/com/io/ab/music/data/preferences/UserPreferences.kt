@@ -80,7 +80,7 @@ class UserPreferences @Inject constructor(
     val sleepTimerEndMs:  Flow<Long>    = context.dataStore.data.map { it[SLEEP_TIMER_END_MS]   ?: 0L }
     // Video
     val videoSortOrder:   Flow<String>  = context.dataStore.data.map { it[VIDEO_SORT_ORDER]     ?: "DATE_RECENT" }
-    val videoViewType:    Flow<String>  = context.dataStore.data.map { it[VIDEO_VIEW_TYPE]      ?: "GRID" }
+    val videoViewType:    Flow<String>  = context.dataStore.data.map { it[VIDEO_VIEW_TYPE]      ?: "LIST" }
     val videoRecentlyPlayedIds: Flow<String> = context.dataStore.data.map { it[VIDEO_RECENTLY_PLAYED] ?: "" }
     val videoLastPositions: Flow<String> = context.dataStore.data.map { it[VIDEO_LAST_POSITIONS] ?: "" }
     // Video player action button states

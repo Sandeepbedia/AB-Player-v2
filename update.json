@@ -1,16 +1,15 @@
 {
-  "version_name": "2.7.1",
-  "version_code": 421,
-  "release_notes": "App version bumped to 2.7.1 (codename 421)",
-  "changelog": [
-    "Episodes panel now labels entries as Video 1, Video 2... in series order with search + Watched/Unwatched filters",
-    "Fixed Recently Played sometimes not showing the video you just watched",
-    "Floating (PiP) video window now has working Previous/Next buttons",
-    "Fixed floating (PiP) window's close button not fully stopping playback",
-    "Moved Playlists card to 2nd position in Explore",
-    "Fixed Audio Focus and Crossfade settings not working",
-    "App version bumped to 2.7.1 (codename 421)"
-  ],
-  "apk_url": "https://github.com/Sandeepbedia/AB-Music/releases/download/v2.7.1/ABMusic-v2.7.1.apk",
-  "force_update": false
+  "version_name": "2.7.5",
+  "version_code": 425,
+  "date": "2026-07-21",
+  "changes": [
+    "🎬 Episodes panel now labels entries as Video 1, Video 2... in series order with Search + Watched/Unwatched filters 📺",
+    "🕒 Fixed Recently Played sometimes not showing the video you just watched 🎥",
+    "🖼️ Floating (PiP) video window now has working Previous/Next buttons ⏮️⏭️",
+    "🛑 Fixed floating (PiP) window's Close button not fully stopping playback ✅",
+    "📂 Moved Playlists card to 2nd position in Explore 🎵",
+    "🎧 Fixed Audio Focus and Crossfade settings not working 🎚️",
+    "🐞 Bug fixes, stability improvements and minor UI polish 🛠️",
+    "🚀 App updated to Version 2.7.5 (Code 425)"
+  ]
 }

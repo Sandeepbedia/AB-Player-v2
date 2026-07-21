@@ -11,32 +11,10 @@ android {
 
     signingConfigs {
         release {
-            def keystorePropsFile = rootProject.file("keystore.properties")
-            def keystoreProps = keystorePropsFile.exists() ? new Properties() : null
-            if (keystoreProps) {
-                keystoreProps.load(new FileInputStream(keystorePropsFile))
-            }
-
-            storeFile file(
-                keystoreProps?.getProperty("storeFile") ?:
-                project.findProperty("AB_RELEASE_STORE_FILE") ?:
-                "keystore/release.jks"
-            )
-            storePassword(
-                keystoreProps?.getProperty("storePassword") ?:
-                project.findProperty("AB_RELEASE_STORE_PASSWORD") ?:
-                ""
-            )
-            keyAlias(
-                keystoreProps?.getProperty("keyAlias") ?:
-                project.findProperty("AB_RELEASE_KEY_ALIAS") ?:
-                "release"
-            )
-            keyPassword(
-                keystoreProps?.getProperty("keyPassword") ?:
-                project.findProperty("AB_RELEASE_KEY_PASSWORD") ?:
-                ""
-            )
+            storeFile file(project.findProperty("AB_RELEASE_STORE_FILE") ?: "keystore/Universe-release.jks")
+            storePassword project.findProperty("AB_RELEASE_STORE_PASSWORD") ?: ""
+            keyAlias project.findProperty("AB_RELEASE_KEY_ALIAS") ?: "release"
+            keyPassword project.findProperty("AB_RELEASE_KEY_PASSWORD") ?: ""
             enableV1Signing = true
             enableV2Signing = true
             enableV3Signing = true
@@ -47,8 +25,8 @@ android {
         applicationId 'com.io.ab.music'
         minSdk 26
         targetSdk 36
-        versionCode 422
-        versionName '2.7.2'
+        versionCode 425
+        versionName '2.7.5'
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         resConfigs "en"
         ndk {

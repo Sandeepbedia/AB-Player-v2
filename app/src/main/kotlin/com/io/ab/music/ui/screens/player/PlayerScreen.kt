@@ -5,6 +5,7 @@ import androidx.compose.animation.core.*
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.*
 import androidx.compose.foundation.gestures.detectDragGestures
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.ui.input.pointer.util.VelocityTracker
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -546,6 +547,16 @@ fun PlayerScreen(
             }
 
             Column(modifier = Modifier.fillMaxWidth()) {
+                // ── Advanced M3 seekbar ──────────────────────────────────────────
+                // Custom pill thumb + tall, fully-rounded gradient track (Material3's
+                // newer expressive media-slider look) instead of the default thin
+                // track + circular thumb.
+                val sliderInteractionSource = remember { MutableInteractionSource() }
+                val thumbHeight by animateDpAsState(
+                    targetValue   = if (isDragging) 24.dp else 18.dp,
+                    animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessMedium),
+                    label         = "seekThumbHeight"
+                )
                 Slider(
                     value         = displayFraction,
                     onValueChange = { frac ->
@@ -557,12 +568,46 @@ fun PlayerScreen(
                         viewModel.seekTo((dragFraction * safeDuration).toLong())
                         isDragging = false
                     },
-                    modifier      = Modifier.fillMaxWidth(),
-                    colors        = SliderDefaults.colors(
+                    modifier           = Modifier.fillMaxWidth(),
+                    interactionSource  = sliderInteractionSource,
+                    colors             = SliderDefaults.colors(
                         thumbColor         = onDynamicBg,
                         activeTrackColor   = onDynamicBg,
                         inactiveTrackColor = onDynamicBg.copy(alpha = 0.25f)
-                    )
+                    ),
+                    thumb = {
+                        Box(
+                            modifier = Modifier
+                                .size(width = 4.dp, height = thumbHeight)
+                                .shadow(if (isDragging) 6.dp else 2.dp, RoundedCornerShape(50))
+                                .background(onDynamicBg, RoundedCornerShape(50))
+                        )
+                    },
+                    track = {
+                        Box(
+                            modifier          = Modifier.fillMaxWidth().height(22.dp),
+                            contentAlignment  = Alignment.CenterStart
+                        ) {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(6.dp)
+                                    .clip(RoundedCornerShape(50))
+                                    .background(onDynamicBg.copy(alpha = 0.22f))
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxWidth(displayFraction.coerceIn(0f, 1f))
+                                    .height(6.dp)
+                                    .clip(RoundedCornerShape(50))
+                                    .background(
+                                        Brush.horizontalGradient(
+                                            listOf(onDynamicBg.copy(alpha = 0.85f), onDynamicBg)
+                                        )
+                                    )
+                            )
+                        }
+                    }
                 )
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                     Text(displayText, style = MaterialTheme.typography.labelSmall,

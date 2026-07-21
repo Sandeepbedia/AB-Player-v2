@@ -12,6 +12,7 @@ import android.content.pm.PackageManager
 import android.graphics.drawable.Icon
 import android.os.Build
 import android.os.Bundle
+import android.os.Process
 import android.util.Rational
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -31,6 +32,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.io.ab.music.data.preferences.UserPreferences
+import com.io.ab.music.service.MusicService
 import com.io.ab.music.ui.navigation.ABMusicNavGraph
 import com.io.ab.music.ui.screens.home.PermissionScreen
 import com.io.ab.music.ui.theme.ABMusicTheme
@@ -142,6 +144,20 @@ class MainActivity : ComponentActivity() {
     // and removed the player from the nav graph entirely — looking like the app
     // had closed instead of shrinking into the floating PiP window.
     private var isInPip by mutableStateOf(false)
+
+    // FIX (real root cause of "PiP X button doesn't force-stop"): tapping the
+    // system PiP window's close (X) button does NOT set isFinishing = true —
+    // Android just stops the activity without ever calling finish() on it, then
+    // separately fires onPictureInPictureModeChanged(false). So the previous
+    // `if (isFinishing)` check in onStop() below was never true for this path
+    // and silently did nothing. The correct signal (confirmed pattern for this
+    // exact problem) is the COMBINATION of the two callbacks: onStop() fires
+    // first while still in PiP, and — only when the X was tapped (not when the
+    // user taps the PiP window to expand back to full screen, which resumes
+    // straight to onStart()/onResume() and never calls onStop() at all) —
+    // onPictureInPictureModeChanged(false) then fires afterward with no
+    // onStart() in between. Track that with this flag.
+    private var stoppedWithoutForeground = false
 
     // Receives the tap on the PiP window's Play/Pause RemoteAction and forwards
     // it to whichever ExoPlayer VideoPlayerScreen has registered — see
@@ -273,6 +289,19 @@ class MainActivity : ComponentActivity() {
     ) {
         super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig)
         isInPip = isInPictureInPictureMode
+        // FIX: see stoppedWithoutForeground above — this combination (PiP just
+        // ended AND the activity already went through onStop() with no onStart()
+        // in between) only happens when the user tapped the PiP window's close
+        // (X) button or swiped it away. Force-stop the app here, the same way
+        // the notification's Close App action does.
+        if (!isInPictureInPictureMode && stoppedWithoutForeground) {
+            forceStopApp()
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        stoppedWithoutForeground = false
     }
 
     override fun onDestroy() {
@@ -281,16 +310,33 @@ class MainActivity : ComponentActivity() {
     }
 
     // FIX: PiP close button — tapping the system "X" on the floating video
-    // window finishes this Activity. onStop() is a direct, always-reliable
-    // Activity callback (unlike a Compose Lifecycle observer, which can be
-    // torn down before it gets to react), so it's the right place to force
-    // playback to actually stop instead of continuing silently in the
-    // background with sound.
+    // window used to be assumed to finish() the Activity, but it doesn't (see
+    // stoppedWithoutForeground above) — it just stops it. onStop() is still a
+    // direct, always-reliable Activity callback (unlike a Compose Lifecycle
+    // observer, which can be torn down before it gets to react), so it's still
+    // the right place to record that a stop happened; the actual force-stop for
+    // the X-button case now runs from onPictureInPictureModeChanged above once
+    // that combination is confirmed. The isFinishing branch here still covers
+    // any other genuine finish (e.g. back button), independent of PiP.
     override fun onStop() {
         super.onStop()
+        stoppedWithoutForeground = true
         if (isFinishing) {
-            VideoPipController.onForceStop?.invoke()
+            forceStopApp()
         }
+    }
+
+    // FIX: releasing the ExoPlayer alone left the app process itself alive in
+    // the background (and MusicService still running if audio had ever been
+    // touched in this session) — same as before, just without a visible video.
+    // The notification's "Close App" button (see NotificationCloseReceiver)
+    // already does a real force-stop: stop the service, then kill the process.
+    // Mirror that exact behavior here so the PiP close button actually closes
+    // the app instead of leaving it lingering in the background.
+    private fun forceStopApp() {
+        try { VideoPipController.onForceStop?.invoke() } catch (_: Exception) {}
+        try { stopService(Intent(this, MusicService::class.java)) } catch (_: Exception) {}
+        Process.killProcess(Process.myPid())
     }
 
     // FIX: Pressing Home (or Recents) while the video screen was on top used to

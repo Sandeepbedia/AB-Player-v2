@@ -1,9 +1,13 @@
 package com.io.ab.music.ui.components
 
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.gestures.detectDragGestures
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
@@ -12,14 +16,17 @@ import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import coil.ImageLoader
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import kotlinx.coroutines.delay
@@ -40,6 +47,23 @@ class DogPetPositionState {
 @Composable
 fun rememberDogPetState(): DogPetPositionState = remember { DogPetPositionState() }
 
+/**
+ * FIX: "dog ka falling/dragging/listenToMusic/quiet image frame achhe trah se
+ * kaam nhi karta" — every frame used to be a separate AsyncImage load straight
+ * from android_asset, re-requested from scratch on EVERY frame swap (up to
+ * ~14 times/second for dragging/falling). AsyncImage shows nothing while a
+ * request is in flight, so any small hitch (first time a state plays, a GC
+ * pause, disk contention) showed up as a blank/flickering frame, and the
+ * faster states (dragging 70ms, falling 90ms) visibly stuttered instead of
+ * reading as a smooth flip-book animation.
+ *
+ * Fix: decode every frame of all four states ONCE, up front, into an
+ * in-memory Bitmap cache; the per-tick animation loop then just swaps between
+ * already-decoded bitmaps — no I/O and no loading gap on the frame boundary,
+ * so quiet/listen/dragging/falling all play back smoothly regardless of how
+ * fast the state changes. A plain AsyncImage is used only as a first-paint
+ * fallback for the handful of frames not yet warm in the cache.
+ */
 @Composable
 fun DogPet(
     isPlaying    : Boolean,
@@ -52,6 +76,27 @@ fun DogPet(
     val listenFrames   = remember { (1..9).map { "dog/listenToMusic/$it.webp" } }
     val draggingFrames = remember { (1..6).map { "dog/dragging/$it.webp" } }
     val fallingFrames  = remember { (1..6).map { "dog/falling/$it.webp" } }
+    val allFramePaths  = remember { quietFrames + listenFrames + draggingFrames + fallingFrames }
+
+    // path -> decoded bitmap. Filled once by the preload effect below, then
+    // read (never re-decoded) on every animation tick.
+    val bitmapCache = remember { mutableStateMapOf<String, Bitmap>() }
+
+    LaunchedEffect(Unit) {
+        val loader = ImageLoader.Builder(context).build()
+        allFramePaths.forEach { path ->
+            try {
+                val request = ImageRequest.Builder(context)
+                    .data("file:///android_asset/$path")
+                    .allowHardware(false) // need a software Bitmap to cache/reuse directly
+                    .build()
+                val bmp = (loader.execute(request).drawable as? BitmapDrawable)?.bitmap
+                if (bmp != null) bitmapCache[path] = bmp
+            } catch (_: Exception) {
+                // Skip a bad/missing frame rather than crash the whole pet animation.
+            }
+        }
+    }
 
     var dogState   by remember { mutableStateOf(DogState.QUIET) }
     var frameIndex by remember { mutableIntStateOf(0) }
@@ -146,13 +191,9 @@ fun DogPet(
     }
     val safeIndex = frameIndex.coerceIn(0, currentFrames.lastIndex)
     val assetPath = currentFrames[safeIndex]
+    val cachedBitmap = bitmapCache[assetPath]
 
-    AsyncImage(
-        model = ImageRequest.Builder(context)
-            .data("file:///android_asset/$assetPath")
-            .crossfade(false)
-            .build(),
-        contentDescription = "Dog pet",
+    Box(
         modifier = modifier
             .size(72.dp)
             .offset { IntOffset(positionState.offsetX.roundToInt(), positionState.offsetY.roundToInt()) }
@@ -180,5 +221,25 @@ fun DogPet(
                     }
                 )
             }
-    )
+    ) {
+        if (cachedBitmap != null) {
+            // Already-decoded frame — swaps instantly, no loading gap.
+            Image(
+                bitmap             = cachedBitmap.asImageBitmap(),
+                contentDescription = "Dog pet",
+                modifier           = Modifier.size(72.dp)
+            )
+        } else {
+            // First-paint fallback only, for the brief window before the
+            // preload effect above has warmed this particular frame.
+            AsyncImage(
+                model = ImageRequest.Builder(context)
+                    .data("file:///android_asset/$assetPath")
+                    .crossfade(false)
+                    .build(),
+                contentDescription = "Dog pet",
+                modifier = Modifier.size(72.dp)
+            )
+        }
+    }
 }

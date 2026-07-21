@@ -152,10 +152,13 @@ fun ABMusicNavGraph(
                     wallpaperActive = wallpaperActive,
                     onTabClick    = { idx ->
                         scope.launch {
-                            // FIX: Use simple tween — spring caused visible bounce/jitter on tab taps
+                            // FIX: Use simple tween — spring caused visible bounce/jitter on tab taps.
+                            // FIX: "gesture switch screens ko fast response karo" — 280ms read as a
+                            // noticeable lag between the tap and the page landing. Shortened to 180ms;
+                            // still eased (no bounce) but snaps into place much closer to instantly.
                             pagerState.animateScrollToPage(
                                 page          = idx,
-                                animationSpec = tween(durationMillis = 280, easing = FastOutSlowInEasing)
+                                animationSpec = tween(durationMillis = 180, easing = FastOutSlowInEasing)
                             )
                         }
                     }
@@ -215,10 +218,30 @@ fun ABMusicNavGraph(
                     // Those rows now call Modifier.guardPagerScroll(), which flips
                     // this off for the duration of a touch on them.
                     userScrollEnabled      = PagerScrollGuard.pagerScrollEnabled,
+                    // FIX: gesture page-switch ignoring swipe speed — a fixed-duration
+                    // tween(260) settles a page in exactly 260ms whether the user
+                    // flicked hard or barely let go, so the swipe never felt tied to
+                    // the gesture. A spring's settle time and overshoot scale with the
+                    // incoming fling velocity that Pager feeds it, so a fast flick
+                    // snaps quickly and a slow drag eases in gently — matching the
+                    // actual swipe speed like WhatsApp-style tab switching.
+                    // FIX: "gesture switch screens ko fast response karo" — StiffnessMediumLow
+                    // made the settle after a swipe feel slow/delayed even on a quick flick.
+                    // FIX (follow-up): the tab-tap tween speedup above didn't touch the actual
+                    // finger-swipe gesture itself — that's controlled by these two values, not
+                    // the tap animation. WhatsApp's tab swipe commits to the next tab on a short,
+                    // quick drag; snapPositionalThreshold=0.3f required dragging 30% of the screen
+                    // width before it would switch, which read as sluggish/unresponsive on a fast
+                    // flick. Lowered to 0.15f so a short quick swipe commits like WhatsApp's, and
+                    // bumped the settle spring to StiffnessHigh so the page snaps into place
+                    // almost immediately after release instead of visibly gliding.
                     flingBehavior         = PagerDefaults.flingBehavior(
                         state                   = pagerState,
-                        snapAnimationSpec       = tween(durationMillis = 260, easing = FastOutSlowInEasing),
-                        snapPositionalThreshold = 0.3f
+                        snapAnimationSpec       = spring(
+                            dampingRatio = Spring.DampingRatioNoBouncy,
+                            stiffness    = Spring.StiffnessHigh
+                        ),
+                        snapPositionalThreshold = 0.15f
                     )
                 ) { page ->
                     Box(modifier = Modifier.fillMaxSize()) {
@@ -532,9 +555,17 @@ private fun RoundedTab(
     onClick : () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    // FIX: pill "shadow jitter" on tab switch — Color.Transparent is (R=0,G=0,B=0,A=0).
+    // Animating between it and an opaque colorScheme.primaryContainer makes
+    // animateColorAsState lerp the RGB channels too, so mid-animation the pill
+    // passes through a dim, darkened version of primaryContainer (a black/grey
+    // "shadow") before settling — visible as a jitter every time the highlight
+    // moves. Using primaryContainer at alpha 0 as the "unselected" target keeps
+    // the RGB channels identical throughout, so only alpha ramps and the pill
+    // fades cleanly with no dark flash.
+    val primaryContainer = MaterialTheme.colorScheme.primaryContainer
     val containerColor by animateColorAsState(
-        targetValue   = if (selected) MaterialTheme.colorScheme.primaryContainer
-                        else androidx.compose.ui.graphics.Color.Transparent,
+        targetValue   = if (selected) primaryContainer else primaryContainer.copy(alpha = 0f),
         animationSpec = tween(durationMillis = 200, easing = FastOutSlowInEasing),
         label         = "tab_bg"
     )

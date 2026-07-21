@@ -24,7 +24,7 @@ data class VideoUiState(
     val isLoading       : Boolean             = true,
     val searchQuery     : String              = "",
     val sortOrder       : VideoSortOrder      = VideoSortOrder.DATE_RECENT,
-    val viewType        : VideoViewType       = VideoViewType.GRID,
+    val viewType        : VideoViewType       = VideoViewType.LIST,
     val selectedFolder  : String?             = null,
     val folders         : List<String>        = emptyList()
 )
@@ -61,7 +61,7 @@ class VideoViewModel @Inject constructor(
             val savedSort = userPreferences.videoSortOrder.first()
             val savedView = userPreferences.videoViewType.first()
             val parsedSort = runCatching { VideoSortOrder.valueOf(savedSort) }.getOrDefault(VideoSortOrder.DATE_RECENT)
-            val parsedView = runCatching { VideoViewType.valueOf(savedView) }.getOrDefault(VideoViewType.GRID)
+            val parsedView = runCatching { VideoViewType.valueOf(savedView) }.getOrDefault(VideoViewType.LIST)
             _uiState.update { it.copy(sortOrder = parsedSort, viewType = parsedView) }
             // Load last positions
             val posData = userPreferences.videoLastPositions.first()

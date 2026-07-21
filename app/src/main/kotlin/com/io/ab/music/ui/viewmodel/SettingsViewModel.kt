@@ -435,8 +435,8 @@ class SettingsViewModel @Inject constructor(
     }
 
     // ── Update Checker ────────────────────────────────────────────────────────
-    private val UPDATE_JSON_URL      = "https://raw.githubusercontent.com/Sandeepbedia/AB-Player/refs/heads/main/update.json"
-    private val CURRENT_VERSION_CODE = 422  // Must match versionCode in app/build.gradle
+    private val UPDATE_JSON_URL      = "https://raw.githubusercontent.com/Sandeepbedia/AB-Player-v2/refs/heads/main/update.json"
+    private val CURRENT_VERSION_CODE = 425   // Must match versionCode in app/build.gradle
     private var initialCheckDone = false
 
     fun checkForUpdate(force: Boolean = false, onUpdateFound: ((UpdateInfo) -> Unit)? = null) {
