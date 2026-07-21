@@ -1,8 +1,9 @@
 {
   "version_name": "2.7.5",
-  "version_code": 425,
+  "version_code": 426,
   "date": "2026-07-21",
-  "changes": [
+  "release_notes": "App updated to Version 2.7.5 (Code 425)",
+  "changelog": [
     "🎬 Episodes panel now labels entries as Video 1, Video 2... in series order with Search + Watched/Unwatched filters 📺",
     "🕒 Fixed Recently Played sometimes not showing the video you just watched 🎥",
     "🖼️ Floating (PiP) video window now has working Previous/Next buttons ⏮️⏭️",
@@ -11,5 +12,7 @@
     "🎧 Fixed Audio Focus and Crossfade settings not working 🎚️",
     "🐞 Bug fixes, stability improvements and minor UI polish 🛠️",
     "🚀 App updated to Version 2.7.5 (Code 425)"
-  ]
+  ],
+  "apk_url": "https://github.com/Sandeepbedia/AB-Player-v2/releases/download/V2.7.5/AB-Music.v2.7.5.apk",
+  "force_update": false
 }
