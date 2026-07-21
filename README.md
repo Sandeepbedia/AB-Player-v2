@@ -1,70 +1,79 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Sandeepbedia/AB-Player/main/logo.jpg" width="200" alt="AB Player Logo"/>
-  <h1>AB Player</h1>
+  <img src="https://raw.githubusercontent.com/Sandeepbedia/AB-Player-v2/main/screenshots/1.home.png" width="120" height="120" style="border-radius: 24px;"/>
+  <h1>🎵 AB Player</h1>
   <p><strong>Your all-in-one offline music & video player for Android</strong></p>
 
   <p>
-    <img src="https://img.shields.io/badge/version-2.6.8-blue?style=flat-square"/>
-    <img src="https://img.shields.io/badge/Android-16+-3DDC84?logo=android&logoColor=white&style=flat-square"/>
-    <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square"/>
+    <img src="https://img.shields.io/badge/version-2.7.5-7C3AED?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/Android-16+-3DDC84?style=for-the-badge&logo=android&logoColor=white"/>
+    <img src="https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge"/>
   </p>
 
-  <a href="https://github.com/Sandeepbedia/AB-Player">
-    <img src="https://img.shields.io/badge/GitHub-Sandeepbedia/AB--Player-181717?logo=github"/>
+  <a href="https://github.com/Sandeepbedia/AB-Player-v2/releases">
+    <img src="https://img.shields.io/badge/Download-Latest%20APK-22C55E?style=for-the-badge&logo=github"/>
   </a>
 </div>
 
----
+<br>
 
-## What is AB Player?
-
-AB Player is a fast, beautiful music and video player for Android. It plays all your offline audio and video files — no internet needed. Clean design, smooth performance, and packed with features.
-
----
-
-## ✨ What You Can Do
-
-### 🎵 Play Music
-- Browse songs by **Albums, Artists, Playlists, or Folders**
-- **Search** any song instantly
-- **Equalizer** with 11 presets (Pop, Rock, Jazz, Classical, etc.)
-- **Bass Boost**, **Crossfade**, **Skip Silence**
-- **Sleep Timer** — fall asleep to music
-- **Queue** — add songs, reorder, play next
-- Repeat modes: Off / One / All
-- Shuffle all songs
-
-### 🎬 Watch Videos
-- Dedicated **Videos** tab with grid or list view
-- **Picture-in-Picture (PiP)** — watch while using other apps
-- Swipe for **brightness & volume**
-- **Lock screen** — no accidental touches
-- **Orientation lock** — portrait or landscape
-
-### 🏠 Home
-- **Recently Played** — pick up where you left off
-- **All Songs** list with sort (Name, Duration, Date, Size)
-- **Multi-select** — share or delete multiple songs at once
-- Quick **Shuffle All** button
-
-### 🎨 Look & Feel
-- **7 themes**: System, Light, Dark, AMOLED (4 color variants)
-- **8 accent colors**: Purple, Blue, Pink, Cyan, Gold, Green, Orange, Teal
-- **Dynamic Color** — matches your wallpaper
-- Smooth neumorphism design
-
-### 🔄 Updates
-- App checks for updates automatically
-- One-tap download & install from inside the app
-- Full changelog history
+<table align="center">
+  <tr>
+    <td width="33%" align="center">🎵 <b>Music</b><br><small>Albums, Artists, Playlists</small></td>
+    <td width="33%" align="center">🎬 <b>Videos</b><br><small>PiP, Lock Screen, Gestures</small></td>
+    <td width="33%" align="center">🎨 <b>Themes</b><br><small>7 Themes, 8 Accents</small></td>
+  </tr>
+</table>
 
 ---
 
-## 📥 Download
+## ✨ Features
 
-[<img src="https://img.shields.io/badge/Download-v2.6.8-3DDC84?style=for-the-badge&logo=github" height="40">](https://github.com/Sandeepbedia/AB-Player/releases/download/v2.6.8/ABPlayer-v2.6.8.apk)
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🎵 Play Music</h3>
+      <ul>
+        <li>Browse by <b>Albums, Artists, Playlists, Folders</b></li>
+        <li>Instant <b>Search</b></li>
+        <li><b>Equalizer</b> with 11 presets</li>
+        <li><b>Bass Boost</b>, <b>Crossfade</b>, <b>Skip Silence</b></li>
+        <li><b>Sleep Timer</b>, <b>Queue</b>, Repeat Modes</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>🎬 Watch Videos</h3>
+      <ul>
+        <li>Grid & List views</li>
+        <li><b>Picture-in-Picture (PiP)</b></li>
+        <li>Swipe for <b>brightness & volume</b></li>
+        <li><b>Lock screen</b> mode</li>
+        <li><b>Orientation lock</b></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🏠 Home</h3>
+      <ul>
+        <li><b>Recently Played</b> — resume instantly</li>
+        <li>Sort: Name, Duration, Date, Size</li>
+        <li><b>Multi-select</b> — share/delete bulk</li>
+        <li>Quick <b>Shuffle All</b></li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>🎨 Look & Feel</h3>
+      <ul>
+        <li><b>7 themes</b>: System, Light, Dark, AMOLED</li>
+        <li><b>8 accent colors</b></li>
+        <li><b>Dynamic Color</b> — matches wallpaper</li>
+        <li>Neumorphism design</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-Or open **Settings > Check Updates** inside the app.
+---
 
 ## 📸 Screenshots
 
@@ -72,37 +81,54 @@ Or open **Settings > Check Updates** inside the app.
 
 | Home | Now Playing |
 |:----:|:-----------:|
-| <img src="screenshots/1.home.png" width="250" alt="Home"/> | <img src="screenshots/2.now%20playing.png" width="250" alt="Now Playing"/> |
+| <img src="screenshots/1.home.png" width="220" alt="Home"/> | <img src="screenshots/2.now%20playing.png" width="220" alt="Now Playing"/> |
 
-| Lyrics | Video |
-|:------:|:-----:|
-| <img src="screenshots/3.lyrics.png" width="250" alt="Lyrics"/> | <img src="screenshots/4.video.png" width="250" alt="Video"/> |
+| Lyrics | Video List |
+|:------:|:----------:|
+| <img src="screenshots/3.lyrics.png" width="220" alt="Lyrics"/> | <img src="screenshots/4.video.png" width="220" alt="Video"/> |
 
 | Video Player | Explore |
 |:------------:|:-------:|
-| <img src="screenshots/5.Video%20player.png" width="250" alt="Video Player"/> | <img src="screenshots/6%20explore.png" width="250" alt="Explore"/> |
+| <img src="screenshots/5.Video%20player.png" width="220" alt="Video Player"/> | <img src="screenshots/6%20explore.png" width="220" alt="Explore"/> |
 
 | Favorites | Settings |
 |:---------:|:--------:|
-| <img src="screenshots/7%20favorits.png" width="250" alt="Favorites"/> | <img src="screenshots/8%20settings.png" width="250" alt="Settings"/> |
+| <img src="screenshots/7%20favorits.png" width="220" alt="Favorites"/> | <img src="screenshots/8%20settings.png" width="220" alt="Settings"/> |
 
 </div>
 
 ---
 
-## 🛠️ For Developers
+## 📥 Download
+
+<div align="center">
+  <a href="https://github.com/Sandeepbedia/AB-Player-v2/releases">
+    <img src="https://img.shields.io/badge/📲%20Download%20v2.7.5-7C3AED?style=for-the-badge&logo=github&logoColor=white" height="50"/>
+  </a>
+
+  <br><br>
+  <i>Or open <b>Settings > Check Updates</b> inside the app.</i>
+</div>
+
+---
+
+## 🛠️ Build from Source
 
 ```bash
-git clone https://github.com/Sandeepbedia/AB-Player.git
-```
-
-Open in Android Studio, sync Gradle, and run:
-
-```bash
+git clone https://github.com/Sandeepbedia/AB-Player-v2.git
+cd AB-Player-v2
 ./gradlew installDebug
 ```
 
-Built with: **Kotlin, Jetpack Compose, Material 3, ExoPlayer, Room DB, Hilt**
+**Built with:** Kotlin · Jetpack Compose · Material 3 · ExoPlayer · Room DB · Hilt
+
+---
+
+## 🔄 Updates
+
+- Automatic update checks on app launch
+- One-tap download & install
+- Full changelog history in Settings
 
 ---
 
@@ -111,7 +137,7 @@ Built with: **Kotlin, Jetpack Compose, Material 3, ExoPlayer, Room DB, Hilt**
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-@Sandeepbedia-181717?style=for-the-badge&logo=github)](https://github.com/Sandeepbedia)
-[![Repository](https://img.shields.io/badge/Repo-AB--Player-blue?style=for-the-badge&logo=github)](https://github.com/Sandeepbedia/AB-Player)
+[![Repo](https://img.shields.io/badge/Repo-AB--Player--v2-7C3AED?style=for-the-badge&logo=github)](https://github.com/Sandeepbedia/AB-Player-v2)
 
 </div>
 
@@ -124,5 +150,5 @@ MIT License — feel free to use, modify, and share.
 ---
 
 <div align="center">
-  <p>Made with ❤️ by <a href="https://github.com/Sandeepbedia">Sandeepbedia</a></p>
+  <sub>Made with ❤️ by <a href="https://github.com/Sandeepbedia">Sandeepbedia</a></sub>
 </div>
