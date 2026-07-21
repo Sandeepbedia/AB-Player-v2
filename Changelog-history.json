@@ -1,104 +1,173 @@
-[
-  {
-    "version": "2.7.1",
-    "versionCode": "421",
-    "date": "2026-07-07",
-    "changes": [
-      "VIDEO PLAYER: Episodes panel now labels entries as Video 1, Video 2... in series order, and adds a search box plus All/Watched/Unwatched filters so long web-series folders are easy to navigate",
-      "VIDEO PLAYER FIX: Recently Played could lose the video you just watched if you backed out quickly — a save/reload race was overwriting the in-memory list with stale data",
-      "VIDEO PLAYER: Floating (PiP) window now has working Previous and Next buttons alongside Play/Pause",
-      "VIDEO PLAYER FIX: Closing the floating (PiP) window with the system X button previously left the player and its wakelock running in the background instead of stopping playback",
-      "EXPLORE: Moved the Playlists card to the 2nd position in the stats row",
-      "SETTINGS FIX: Audio Focus toggle now actually controls whether the app manages audio focus, instead of always taking focus regardless of the setting",
-      "SETTINGS FIX: Crossfade toggle now fades volume out/in across track transitions instead of doing nothing",
-      "Added a system notification whenever a new app update is available (with an Update Now action) — this already existed but is now confirmed working with the corrected version check",
-      "VERSION: Bumped to 2.7.1 (code/codename 421)"
-    ]
-  },
-  {
-    "version": "2.7.0",
-    "versionCode": "420",
-    "date": "2026-07-05",
-    "changes": [
-      "EXPLORE FIX: Song rows now show duration stacked under the artist name (with the Lyrics tag right after it), matching the rest of the app instead of duration floating on the right",
-      "EXPLORE: Added a quick “Add Songs” shortcut on each playlist row so you can add songs to a playlist without opening it first",
-      "EXPLORE: Tapping an artist now opens a full Artist screen with their entire song list, instead of jumping straight into playing the first song",
-      "CRASH REPORTING: Crash screen now messages the developer's Telegram (@Infinity_384) directly and hands over the .txt crash log to send in-chat, instead of requiring a bot token",
-      "VERSION: Bumped to 2.7.0 (code/codename 420)"
-    ]
-  },
-  {
-    "version": "2.6.11",
-    "versionCode": "419",
-    "date": "2026-07-02",
-    "changes": [
-      "VIDEO FIX: Swiping down from the top edge to reveal the status bar no longer also moves the brightness/volume gesture indicators — the top strip is now excluded from the gesture panels the same way the left/right dead zones already were",
-      "VIDEO: Removed the leftover debug colour-tint overlays (green/yellow/pink gesture panels + black top/bottom dead-zone shading) that were visibly darkening/tinting the video — gestures still work exactly the same, just invisible now",
-      "VIDEO FIX: Seek bar no longer glitches/snaps back when you release a slide — the displayed position now updates immediately instead of waiting up to 250ms for the next position tick",
-      "VERSION: Bumped to 2.6.11 (code/codename 419)"
-    ]
-  },
-  {
-    "version": "2.6.10",
-    "versionCode": "418",
-    "date": "2026-07-02",
-    "changes": [
-      "LYRICS FIX: Replaced the reactive per-emission lyrics batcher with a single continuous background worker — no more waiting for a DB change to wake it back up (previously stalled completely if a batch's lookups all failed to find lyrics, since nothing changed to re-trigger it)",
-      "LYRICS: Faster tagging — startup delay cut from 12s to 3s, batch size increased 3 → 6 songs, gap between requests cut from 1.5s to 0.6s; worker keeps looping through the whole library until every song is tagged, then polls every 20s for newly-added songs",
-      "VERSION: Bumped to 2.6.10 (code/codename 418)"
-    ]
-  },
-  {
-    "version": "2.6.9",
-    "versionCode": "417",
-    "date": "2026-07-02",
-    "changes": [
-      "VIDEO FIX: Navigation bar / gesture pill no longer sits visibly on top of the video — both status and nav bars are now hidden together in immersive-sticky mode (edge swipe still reveals them briefly for Back Gesture, then auto-hides again)",
-      "VIDEO FIX: Bars no longer pop back up and stay stuck visible after the window regains focus (returning from a dialog, PiP resize, Recents, or another app) — they're now re-hidden immediately, which also removes the earlier jank when switching in/out of the player screen",
-      "LIBRARY: App now rescans for new songs in the background every time it's opened (previously only scanned on first-ever launch, relying on a background file watcher for anything after that, which missed files added while the app was fully closed)",
-      "LYRICS FIX: Fixed a bug where lyrics were only ever fetched for the first 3 untagged songs per app session, then silently stopped forever — the lyrics tag now keeps batching through the whole library (a few songs at a time, gently rate-limited) until everything is tagged, and picks back up automatically as new songs are added; fetched lyrics are cached locally so they aren't re-downloaded once tagged",
-      "SETTINGS: Dog Pet companion now defaults to OFF — user can turn it on manually from Settings",
-      "VERSION: Bumped to 2.6.9 (code/codename 417)"
-    ]
-  },
-  {
-    "version": "2.6.8",
-    "versionCode": "416",
-    "date": "2026-07-02",
-    "changes": [
-      "NATIVE LIBS: Added app/src/main/jniLibs/arm64-v8a and armeabi-v7a folders (matching existing abiFilters) to hold required .so files — libffmpeg, libavcodec, libavformat, libavutil, libswresample, libswscale, libavfilter, libavdevice, libpostproc, libvlc, libvlccore, libmpv",
-      "NATIVE LIBS: Added REQUIRED_LIBS.md inside jniLibs/ documenting exactly which .so files go where; useLegacyPackaging is already set so Gradle packages them uncompressed into lib/<abi>/ at compile time",
-      "VERSION: Bumped to 2.6.8 (code/codename 416)"
-    ]
-  },
-  {
-    "version": "2.6.7",
-    "versionCode": "415",
-    "date": "2026-06-30",
-    "changes": [
-      "HOME: Recently Played cards can now be long-pressed to extend/de-extend, showing the full title and artist without truncation",
-      "HOME FIX: Recently Played row now uses a real magnet-style snap fling so the first card reliably snaps to the start edge on every device, instead of sometimes stopping mid-scroll",
-      "VIDEO FIX: Left/right dead zones no longer leak brightness or volume changes — touches starting in the dead zone now bail out of the gesture handler immediately instead of only being filtered in the swipe branch",
-      "VIDEO FIX: System back-gesture exclusion rect was covering the entire player (silently disabling the OS back swipe everywhere); now only the active brightness/PiP/volume panel strip is excluded, so the dead zones stay genuinely free for the back gesture on all devices",
-      "VERSION: Bumped to 2.6.7 (code/codename 415)"
-    ]
-  },
-  {
-    "version": "2.6.6",
-    "versionCode": "414",
-    "date": "2026-06-30",
-    "changes": [
-      "WALLPAPER FIX: Custom wallpaper now updates correctly when changed — previously a fixed filename caused Coil's image cache to keep showing the old picked image",
-      "WALLPAPER: Old wallpaper files auto-cleaned from app storage when a new one is picked",
-      "VIDEO: Added top & bottom dead-zone blocks matching the left/right gesture panel styling",
-      "VIDEO FIX: Entering PiP no longer closes the app — Activity-level PiP state tracking added so the player survives the configuration change instead of being torn down",
-      "VIDEO FIX: clearCurrentVideo() no longer fires during PiP transition — video state stays intact in the floating window",
-      "VIDEO FIX: Back gesture disabled while in PiP so it doesn't pop the nav stack under the floating window",
-      "VIDEO: Controls/gesture overlay hidden while in PiP — system shows its own minimal floating controls",
-      "VIDEO FIX: Android Back Gesture now works properly inside the video player — previously hiding both status+nav bars together with show-on-swipe behavior intercepted edge swipes",
-      "VIDEO: Status bar still hidden for immersive video; navigation bar gesture area left untouched",
-      "MINI PLAYER FIX: Album art no longer keeps rotating in the background when paused — replaced always-running infinite animation with a properly start/stop-controlled Animatable",
-      "VERSION: Bumped to 2.6.6 (code/codename 414)"
-    ]
-  }
-]
+{
+  "versions": [
+    {
+      "version_name": "2.7.1",
+      "version_code": 421,
+      "date": "2026-07-07",
+      "changes": [
+        "⚡ 98% fixed laggy UI for a much smoother experience",
+        "🔎 Explore UI improvements with artist screen, better song layout & quick Add Songs shortcut 🎵",
+        "💥 Added automatic crash reporting with detailed logs and one-tap Telegram sharing 📄",
+        "🎬 Major video player fixes for gestures, immersive mode, seek bar, PiP and Back Gesture 📺",
+        "🎬 Episodes panel now labels entries as Video 1, Video 2... in series order with Search + Watched/Unwatched filters",
+        "🕒 Fixed Recently Played sometimes not showing the video you just watched",
+        "🖼️ Floating (PiP) video window now has working Previous/Next buttons",
+        "🛑 Fixed floating (PiP) window's Close button not fully stopping playback",
+        "📂 Moved Playlists card to 2nd position in Explore",
+        "🎧 Fixed Audio Focus and Crossfade settings not working",
+        "🎵 Lyrics now download faster and continue scanning your entire library automatically ⚡",
+        "📚 Library now rescans for newly added songs every time the app starts 🎼",
+        "🏠 Recently Played cards can now expand/collapse with smoother snapping 🎶",
+        "🖼️ Fixed custom wallpaper refreshing and automatic cleanup of old wallpapers ✨",
+        "🐶 Dancing Dog Pet is now disabled by default and can be enabled from Settings ⚙️",
+        "💿 Fixed Mini Player album art rotation pausing correctly with playback 🎧",
+        "📦 Added native FFmpeg, VLC & MPV library support for future enhancements 🚀",
+        "🐞 Numerous bug fixes, UI polish and performance improvements 🛠️",
+        "🚀 App updated to Version 2.7.1 (Code 421)"
+      ]
+    },
+    {
+      "version_name": "2.6.5",
+      "version_code": 413,
+      "date": "2026-06-23",
+      "changes": [
+        "✨ Added Dancing Pet 🐶",
+        "🎨 Fixed Tab Bar theme mismatch 🎯",
+        "🧩 Added Home Screen Widgets (Beta) 📱",
+        "🚀 Added Shortcut Launcher ⚡",
+        "⚡ Improved UI performance and reduced lag 🚄",
+        "🎞️ Disabled many unnecessary animations for a smoother experience 💨",
+        "🐞 Various bug fixes and stability improvements 🛠️",
+        "📦 App version bumped to 2.6.5 (Code 413)"
+      ]
+    },
+    {
+      "version_name": "2.6.4",
+      "version_code": 412,
+      "date": "2026-06-21",
+      "changes": [
+        "🖼️ New: Manual Wallpaper Theme — pick any photo from your gallery as the app background 🎨",
+        "✨ Top tab bar and screen backgrounds turn transparent when a wallpaper is active 🪟",
+        "📱 Window status bar and navigation bar now fully transparent for a seamless wallpaper experience",
+        "⚙️ Settings > Appearance > Manual Wallpaper — toggle on/off and change image anytime",
+        "🌫️ New Blur slider (0–40dp) to manually control wallpaper softness",
+        "🌑 New Overlay Darkness slider to improve text/icon readability",
+        "💾 Wallpaper is copied into app-private storage for persistence without extra permissions",
+        "📦 App version bumped to 2.6.4 (Code 412)"
+      ]
+    },
+    {
+      "version_name": "2.6.2",
+      "version_code": 410,
+      "date": "2026-06-11",
+      "changes": [
+        "🎥 Video player portrait/landscape button layout redesigned",
+        "🔒 Lock button moved to the bottom-left above the seek bar",
+        "🌍 Audio track & subtitle now auto-select based on device language",
+        "💾 Player action buttons now remember their state after reopening",
+        "🎨 Top navbar and status bar now match the selected theme",
+        "🖌️ Video player header now follows the app theme",
+        "⏱️ Song duration now appears below artist name on Home",
+        "📋 Added 3-dot menu to all songs with Play, Queue, Playlist, Share & Favorite",
+        "🖼️ MiniPlayer & Now Playing artwork no longer resets when paused",
+        "🐞 Fixed seek bar flashing/jumping while scrubbing",
+        "😴 Custom sleep timer now supports any minute value",
+        "📦 App version bumped to Version 2.6.2 (Code 410)"
+      ]
+    },
+    {
+      "version_name": "2.6.8",
+      "version_code": 406,
+      "date": "2026-06-07",
+      "changes": [
+        "🔄 Fixed update check not triggering",
+        "📝 Updated update.json with the correct version code",
+        "✅ Update check now works from Home and Settings",
+        "🔕 Removed unnecessary 'App is up-to-date' toast",
+        "📚 Library tabs now auto-adjust to screen width",
+        "⚡ Added session-level flag to reduce repeated update checks",
+        "🔍 Manual update button always forces a fresh check"
+      ]
+    },
+    {
+      "version_name": "2.5.7",
+      "version_code": 405,
+      "date": "2026-06-06",
+      "changes": [
+        "🎬 Added video playback support",
+        "⚡ Improved UI performance and stability"
+      ]
+    },
+    {
+      "version_name": "4.1",
+      "version_code": 5,
+      "date": "2026-05-30",
+      "changes": [
+        "⚡ Fixed UI lag with snapshotFlow optimization",
+        "📝 Enhanced Update Dialog with numbered changelog",
+        "🏷️ Added version badge and improved dialog hierarchy",
+        "🧩 Added contentType for better LazyList performance",
+        "🚀 Fixed MiniPlayer scroll detection lag",
+        "📄 Structured update.json with changelog array",
+        "🎨 Improved dismiss button in Update Dialog"
+      ]
+    },
+    {
+      "version_name": "4.0",
+      "version_code": 4,
+      "date": "2026-05-29",
+      "changes": [
+        "🎵 Fixed playlist song adding",
+        "📊 Fixed playlist song count",
+        "📂 Added Playlist Detail screen",
+        "➕ Added Add Songs to Playlist dialog",
+        "🎚️ Fixed Equalizer settings",
+        "😴 Sleep Timer now persists after restart",
+        "🧹 Fixed Clear Cache",
+        "📜 Added Changelog History screen",
+        "⚡ Multiple UI performance improvements"
+      ]
+    },
+    {
+      "version_name": "3.5",
+      "version_code": 3,
+      "date": "2026-05-21",
+      "changes": [
+        "💎 Applied Neumorphic design across the app",
+        "🎨 Added AMOLED Purple, Cyan, Pink & Gold themes",
+        "🔤 Added multiple sorting options",
+        "📡 Added MediaStore observer with debounce",
+        "🎚️ Added Crossfade toggle",
+        "👆 MiniPlayer now supports swipe-to-skip",
+        "⚡ Smooth zero-jank horizontal pager tabs"
+      ]
+    },
+    {
+      "version_name": "3.0",
+      "version_code": 2,
+      "date": "2026-05-15",
+      "changes": [
+        "✨ Rebuilt UI with Jetpack Compose",
+        "🎬 Added ExoPlayer with MediaSession",
+        "🔔 Persistent playback notification",
+        "❤️ Favorites system with Room database",
+        "📈 Added Recently Played & Most Played",
+        "💿 Album & Artist detail screens",
+        "🔍 Real-time search with debounce"
+      ]
+    },
+    {
+      "version_name": "2.0",
+      "version_code": 1,
+      "date": "2026-05-01",
+      "changes": [
+        "🎉 Initial public release of AB Player",
+        "🎵 Offline music playback with MediaStore scanning",
+        "⏯️ Basic playback controls",
+        "🎚️ 5-band Equalizer with presets",
+        "📂 Playlist creation and management",
+        "🌙 Dark & Light theme support"
+      ]
+    }
+  ]
+}
