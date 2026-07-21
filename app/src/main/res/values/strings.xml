@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">AB Player</string>
+    <string name="app_description">Powerful Offline Music Player</string>
+    <string name="permission_rationale">AB Player needs access to your audio files to play music stored on your device.</string>
+    <string name="no_songs_found">No songs found on your device</string>
+    <string name="scanning">Scanning music…</string>
+    <string name="shortcut_home_short">Home</string>
+    <string name="shortcut_home_long">Open AB Player Home</string>
+    <string name="shortcut_video_short">Video</string>
+    <string name="shortcut_video_long">Open AB Player Video</string>
+
+    <!-- Widget strings -->
+    <string name="widget_now_playing_desc">AB Player Now Playing Pro (5x2)</string>
+    <string name="widget_media_desc">AB Player Media Control (4x2)</string>
+    <string name="widget_compact_desc">AB Player Compact Player (4x1)</string>
+    <string name="widget_album_desc">AB Player Album Art (2x2)</string>
+    <string name="widget_mini_desc">AB Player Mini Control (2x1)</string>
+    <string name="widget_quick_desc">AB Player Quick Play (1x1)</string>
+    <string name="no_song_playing">No song playing</string>
+    <string name="unknown_artist">Unknown Artist</string>
+    <string name="album_art">Album Art</string>
+    <string name="play_pause">Play / Pause</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="favorite">Favorite</string>
+    <string name="queue">Queue</string>
+</resources>

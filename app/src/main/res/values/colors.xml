@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_primary">#9C27B0</color>
+    <color name="neon_blue">#00B4FF</color>
+    <color name="amoled_black">#000000</color>
+    <color name="dark_background">#0D0D14</color>
+</resources>

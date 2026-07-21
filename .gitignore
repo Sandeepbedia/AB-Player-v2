@@ -1,0 +1,23 @@
+# Signing keys — NEVER commit these
+*.jks
+*.keystore
+app/keystore/
+
+# Local secrets / passwords
+local.properties
+keystore.properties
+*.env
+
+# Android Studio / Gradle
+.gradle/
+.idea/
+*.iml
+build/
+app/build/
+.cxx/
+captures/
+local.properties
+
+# OS junk
+.DS_Store
+Thumbs.db

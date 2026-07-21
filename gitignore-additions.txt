@@ -1,0 +1,5 @@
+# Add these lines to your existing .gitignore (agar already nahi hain)
+keystore.properties
+*.jks
+*.keystore
+local.properties

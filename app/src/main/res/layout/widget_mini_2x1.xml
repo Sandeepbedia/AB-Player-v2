@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg_rounded"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="6dp">
+
+    <ImageView android:id="@+id/widget_album_art"
+        android:layout_width="38dp" android:layout_height="38dp"
+        android:scaleType="centerCrop" android:background="@drawable/widget_art_bg"
+        android:contentDescription="@string/album_art" />
+
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:layout_marginStart="6dp" android:orientation="vertical">
+        <TextView android:id="@+id/widget_song_title"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/no_song_playing" android:textColor="#FFFFFF"
+            android:textSize="10sp" android:textStyle="bold" android:maxLines="1" android:ellipsize="end" />
+        <!-- Tiny visualizer -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="12dp"
+            android:layout_marginTop="3dp" android:orientation="horizontal" android:gravity="center_vertical">
+            <View android:id="@+id/viz_bar1" android:layout_width="3dp" android:layout_height="5dp"  android:layout_marginHorizontal="1dp" android:background="#BB86FC" />
+            <View android:id="@+id/viz_bar2" android:layout_width="3dp" android:layout_height="10dp" android:layout_marginHorizontal="1dp" android:background="#9D4EDD" />
+            <View android:id="@+id/viz_bar3" android:layout_width="3dp" android:layout_height="6dp"  android:layout_marginHorizontal="1dp" android:background="#BB86FC" />
+            <View android:id="@+id/viz_bar4" android:layout_width="3dp" android:layout_height="12dp" android:layout_marginHorizontal="1dp" android:background="#9D4EDD" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton android:id="@+id/widget_btn_play_pause"
+        android:layout_width="34dp" android:layout_height="34dp"
+        android:src="@drawable/ic_widget_play" android:background="@drawable/widget_play_btn_bg"
+        android:tint="#FFFFFF" android:contentDescription="@string/play_pause" />
+</LinearLayout>

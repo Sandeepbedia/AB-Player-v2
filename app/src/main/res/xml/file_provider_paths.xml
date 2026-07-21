@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Allow sharing files from external storage (music/video paths) -->
+    <external-path name="external_files" path="." />
+    <root-path name="root" path="." />
+    <cache-path name="update_cache" path="updates/" />
+    <!-- Crash log .txt files written to internal storage, shared to Telegram -->
+    <files-path name="crash_logs" path="crash_logs/" />
+</paths>

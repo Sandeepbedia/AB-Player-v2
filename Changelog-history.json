@@ -1,0 +1,188 @@
+{
+  "versions": [
+    {
+      "version_name": "2.7.5",
+      "version_code": 425,
+      "date": "2026-07-21",
+      "changes": [
+        "🎬 Episodes panel now labels entries as Video 1, Video 2... in series order with Search + Watched/Unwatched filters 📺",
+        "🕒 Fixed Recently Played sometimes not showing the video you just watched 🎥",
+        "🖼️ Floating (PiP) video window now has working Previous/Next buttons ⏮️⏭️",
+        "🛑 Fixed floating (PiP) window's Close button not fully stopping playback ✅",
+        "📂 Moved Playlists card to 2nd position in Explore 🎵",
+        "🎧 Fixed Audio Focus and Crossfade settings not working 🎚️",
+        "🐞 Bug fixes, stability improvements and minor UI polish 🛠️",
+        "🚀 App updated to Version 2.7.5 (Code 425)"
+      ]
+    },
+    {
+      "version_name": "2.7.1",
+      "version_code": 421,
+      "date": "2026-07-07",
+      "changes": [
+        "⚡ 98% fixed laggy UI for a much smoother experience",
+        "🔎 Explore UI improvements with artist screen, better song layout & quick Add Songs shortcut 🎵",
+        "💥 Added automatic crash reporting with detailed logs and one-tap Telegram sharing 📄",
+        "🎬 Major video player fixes for gestures, immersive mode, seek bar, PiP and Back Gesture 📺",
+        "🎬 Episodes panel now labels entries as Video 1, Video 2... in series order with Search + Watched/Unwatched filters",
+        "🕒 Fixed Recently Played sometimes not showing the video you just watched",
+        "🖼️ Floating (PiP) video window now has working Previous/Next buttons",
+        "🛑 Fixed floating (PiP) window's Close button not fully stopping playback",
+        "📂 Moved Playlists card to 2nd position in Explore",
+        "🎧 Fixed Audio Focus and Crossfade settings not working",
+        "🎵 Lyrics now download faster and continue scanning your entire library automatically ⚡",
+        "📚 Library now rescans for newly added songs every time the app starts 🎼",
+        "🏠 Recently Played cards can now expand/collapse with smoother snapping 🎶",
+        "🖼️ Fixed custom wallpaper refreshing and automatic cleanup of old wallpapers ✨",
+        "🐶 Dancing Dog Pet is now disabled by default and can be enabled from Settings ⚙️",
+        "💿 Fixed Mini Player album art rotation pausing correctly with playback 🎧",
+        "📦 Added native FFmpeg, VLC & MPV library support for future enhancements 🚀",
+        "🐞 Numerous bug fixes, UI polish and performance improvements 🛠️",
+        "🚀 App updated to Version 2.7.1 (Code 421)"
+      ]
+    },
+    {
+      "version_name": "2.6.5",
+      "version_code": 413,
+      "date": "2026-06-23",
+      "changes": [
+        "✨ Added Dancing Pet 🐶",
+        "🎨 Fixed Tab Bar theme mismatch 🎯",
+        "🧩 Added Home Screen Widgets (Beta) 📱",
+        "🚀 Added Shortcut Launcher ⚡",
+        "⚡ Improved UI performance and reduced lag 🚄",
+        "🎞️ Disabled many unnecessary animations for a smoother experience 💨",
+        "🐞 Various bug fixes and stability improvements 🛠️",
+        "📦 App version bumped to 2.6.5 (Code 413)"
+      ]
+    },
+    {
+      "version_name": "2.6.4",
+      "version_code": 412,
+      "date": "2026-06-21",
+      "changes": [
+        "🖼️ New: Manual Wallpaper Theme — pick any photo from your gallery as the app background 🎨",
+        "✨ Top tab bar and screen backgrounds turn transparent when a wallpaper is active 🪟",
+        "📱 Window status bar and navigation bar now fully transparent for a seamless wallpaper experience",
+        "⚙️ Settings > Appearance > Manual Wallpaper — toggle on/off and change image anytime",
+        "🌫️ New Blur slider (0–40dp) to manually control wallpaper softness",
+        "🌑 New Overlay Darkness slider to improve text/icon readability",
+        "💾 Wallpaper is copied into app-private storage for persistence without extra permissions",
+        "📦 App version bumped to 2.6.4 (Code 412)"
+      ]
+    },
+    {
+      "version_name": "2.6.2",
+      "version_code": 410,
+      "date": "2026-06-11",
+      "changes": [
+        "🎥 Video player portrait/landscape button layout redesigned",
+        "🔒 Lock button moved to the bottom-left above the seek bar",
+        "🌍 Audio track & subtitle now auto-select based on device language",
+        "💾 Player action buttons now remember their state after reopening",
+        "🎨 Top navbar and status bar now match the selected theme",
+        "🖌️ Video player header now follows the app theme",
+        "⏱️ Song duration now appears below artist name on Home",
+        "📋 Added 3-dot menu to all songs with Play, Queue, Playlist, Share & Favorite",
+        "🖼️ MiniPlayer & Now Playing artwork no longer resets when paused",
+        "🐞 Fixed seek bar flashing/jumping while scrubbing",
+        "😴 Custom sleep timer now supports any minute value",
+        "📦 App version bumped to Version 2.6.2 (Code 410)"
+      ]
+    },
+    {
+      "version_name": "2.6.8",
+      "version_code": 406,
+      "date": "2026-06-07",
+      "changes": [
+        "🔄 Fixed update check not triggering",
+        "📝 Updated update.json with the correct version code",
+        "✅ Update check now works from Home and Settings",
+        "🔕 Removed unnecessary 'App is up-to-date' toast",
+        "📚 Library tabs now auto-adjust to screen width",
+        "⚡ Added session-level flag to reduce repeated update checks",
+        "🔍 Manual update button always forces a fresh check"
+      ]
+    },
+    {
+      "version_name": "2.5.7",
+      "version_code": 405,
+      "date": "2026-06-06",
+      "changes": [
+        "🎬 Added video playback support",
+        "⚡ Improved UI performance and stability"
+      ]
+    },
+    {
+      "version_name": "4.1",
+      "version_code": 5,
+      "date": "2026-05-30",
+      "changes": [
+        "⚡ Fixed UI lag with snapshotFlow optimization",
+        "📝 Enhanced Update Dialog with numbered changelog",
+        "🏷️ Added version badge and improved dialog hierarchy",
+        "🧩 Added contentType for better LazyList performance",
+        "🚀 Fixed MiniPlayer scroll detection lag",
+        "📄 Structured update.json with changelog array",
+        "🎨 Improved dismiss button in Update Dialog"
+      ]
+    },
+    {
+      "version_name": "4.0",
+      "version_code": 4,
+      "date": "2026-05-29",
+      "changes": [
+        "🎵 Fixed playlist song adding",
+        "📊 Fixed playlist song count",
+        "📂 Added Playlist Detail screen",
+        "➕ Added Add Songs to Playlist dialog",
+        "🎚️ Fixed Equalizer settings",
+        "😴 Sleep Timer now persists after restart",
+        "🧹 Fixed Clear Cache",
+        "📜 Added Changelog History screen",
+        "⚡ Multiple UI performance improvements"
+      ]
+    },
+    {
+      "version_name": "3.5",
+      "version_code": 3,
+      "date": "2026-05-21",
+      "changes": [
+        "💎 Applied Neumorphic design across the app",
+        "🎨 Added AMOLED Purple, Cyan, Pink & Gold themes",
+        "🔤 Added multiple sorting options",
+        "📡 Added MediaStore observer with debounce",
+        "🎚️ Added Crossfade toggle",
+        "👆 MiniPlayer now supports swipe-to-skip",
+        "⚡ Smooth zero-jank horizontal pager tabs"
+      ]
+    },
+    {
+      "version_name": "3.0",
+      "version_code": 2,
+      "date": "2026-05-15",
+      "changes": [
+        "✨ Rebuilt UI with Jetpack Compose",
+        "🎬 Added ExoPlayer with MediaSession",
+        "🔔 Persistent playback notification",
+        "❤️ Favorites system with Room database",
+        "📈 Added Recently Played & Most Played",
+        "💿 Album & Artist detail screens",
+        "🔍 Real-time search with debounce"
+      ]
+    },
+    {
+      "version_name": "2.0",
+      "version_code": 1,
+      "date": "2026-05-01",
+      "changes": [
+        "🎉 Initial public release of AB Player",
+        "🎵 Offline music playback with MediaStore scanning",
+        "⏯️ Basic playback controls",
+        "🎚️ 5-band Equalizer with presets",
+        "📂 Playlist creation and management",
+        "🌙 Dark & Light theme support"
+      ]
+    }
+  ]
+}
