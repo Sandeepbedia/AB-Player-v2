@@ -72,10 +72,6 @@ Or open **Settings > Check Updates** inside the app.
 
 <div align="center">
 
-| Home | Music Player |
-|:----:|:------------:|
-| <img src="screenshots/1%20Home.png" width="250" alt="Home"/> | <img src="screenshots/2%20music%20player.png" width="250" alt="Music Player"/> |
-
 | Song Lyrics | Videos |
 |:-----------:|:------:|
 | <img src="screenshots/3%20song%20lyrics.png" width="250" alt="Song Lyrics"/> | <img src="screenshots/4%20videos.png" width="250" alt="Videos"/> |
