@@ -1,0 +1,66 @@
+AB Player v2 — Source-Available License (Contribution Allowed, Redistribution Restricted)
+Copyright (c) 2026 Sandeepbedia
+All Rights Reserved (with contribution exceptions below)
+
+1. DEFINITIONS
+"Software" means the AB Player v2 source code, assets, resources, and
+associated documentation contained in this repository.
+"Author" means Sandeepbedia, the original copyright holder of the Software.
+"You" means any individual or entity accessing, forking, or contributing
+to the Software.
+
+2. PERMITTED USES
+You are permitted, free of charge, to:
+   a) View and study the source code for personal, educational, or
+      research purposes.
+   b) Fork the repository SOLELY for the purpose of preparing a Pull
+      Request back to this repository.
+   c) Build and run the app locally from source for testing your own
+      contribution before submitting it.
+   d) Submit bug reports, feature requests, and Pull Requests via the
+      official repository.
+
+3. RESTRICTED USES (NOT PERMITTED WITHOUT WRITTEN PERMISSION)
+Unless you have received prior written permission from the Author, you
+may NOT:
+   a) Copy, clone, mirror, or redistribute the Software (in whole or in
+      substantial part) in any other public or private repository,
+      website, app store, or package registry.
+   b) Publish, sell, sublicense, or distribute the Software or any
+      compiled/derivative binary (APK/AAB) under your own name, brand,
+      or as your own product — on the Play Store, F-Droid, third-party
+      app stores, or any other platform.
+   c) Remove or alter copyright, attribution, or license notices from
+      the Software.
+   d) Use the Software, in whole or in substantial part, as the basis
+      for a competing or rebranded application.
+   e) Use the "AB Player" name, logo, or branding assets in any
+      derivative or redistributed work.
+
+4. CONTRIBUTIONS
+By submitting a Pull Request, patch, or any other contribution to this
+repository, you agree that:
+   a) You grant the Author a perpetual, worldwide, royalty-free,
+      irrevocable license to use, modify, relicense, and distribute
+      your contribution as part of the Software.
+   b) You confirm the contribution is your own original work, or that
+      you have the rights necessary to submit it.
+   c) Your contribution does not, by itself, grant you ownership or
+      redistribution rights over the rest of the Software.
+
+5. NO WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY ARISING FROM THE USE OF THE SOFTWARE.
+
+6. TERMINATION
+Any violation of Section 3 automatically terminates your rights under
+this License. The Author reserves the right to request takedown of any
+unauthorized copy, fork (beyond contribution purposes), or redistribution
+via GitHub DMCA or other applicable legal process.
+
+7. CONTACT
+For licensing requests, commercial use, or permissions beyond this
+License, contact the Author via GitHub: https://github.com/Sandeepbedia

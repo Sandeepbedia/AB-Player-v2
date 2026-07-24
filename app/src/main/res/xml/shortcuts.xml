@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="home"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_home"
+        android:shortcutShortLabel="@string/shortcut_home_short"
+        android:shortcutLongLabel="@string/shortcut_home_long">
+        <intent
+            android:action="com.io.ab.music.shortcut.HOME"
+            android:targetPackage="com.io.ab.music"
+            android:targetClass="com.io.ab.music.MainActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="video"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_video"
+        android:shortcutShortLabel="@string/shortcut_video_short"
+        android:shortcutLongLabel="@string/shortcut_video_long">
+        <intent
+            android:action="com.io.ab.music.shortcut.VIDEO"
+            android:targetPackage="com.io.ab.music"
+            android:targetClass="com.io.ab.music.MainActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

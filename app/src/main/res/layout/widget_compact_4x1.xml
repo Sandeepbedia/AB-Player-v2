@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AB Player – 4×1 Compact Widget (Beautiful Edition)
+    Layout: [AlbumArt] [Title / Artist] [❤] [⏮] [⏯] [⏭]
+    No wavebar. Dynamic Palette colors applied via RemoteViews.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg_rounded"
+    android:padding="6dp">
+
+    <!-- Album Art (left) -->
+    <ImageView
+        android:id="@+id/widget_album_art"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="2dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/widget_art_bg"
+        android:contentDescription="@string/album_art" />
+
+    <!-- Control buttons (right side) -->
+    <LinearLayout
+        android:id="@+id/widget_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="2dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Favorite -->
+        <ImageButton
+            android:id="@+id/widget_btn_favorite"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_widget_heart"
+            android:background="@android:color/transparent"
+            android:tint="#FFFFFF"
+            android:contentDescription="@string/favorite"
+            android:layout_marginEnd="2dp" />
+
+        <!-- Previous -->
+        <ImageButton
+            android:id="@+id/widget_btn_prev"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_widget_prev"
+            android:background="@android:color/transparent"
+            android:tint="#FFFFFF"
+            android:contentDescription="@string/previous" />
+
+        <!-- Play/Pause (pill shaped accent bg) -->
+        <ImageButton
+            android:id="@+id/widget_btn_play_pause"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginHorizontal="4dp"
+            android:src="@drawable/ic_widget_play"
+            android:background="@drawable/widget_play_btn_bg"
+            android:tint="#FFFFFF"
+            android:contentDescription="@string/play_pause" />
+
+        <!-- Next -->
+        <ImageButton
+            android:id="@+id/widget_btn_next"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_widget_next"
+            android:background="@android:color/transparent"
+            android:tint="#FFFFFF"
+            android:contentDescription="@string/next" />
+    </LinearLayout>
+
+    <!-- Song info (fills remaining space between art and controls) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/widget_album_art"
+        android:layout_toStartOf="@id/widget_controls"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="6dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/widget_song_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_song_playing"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <TextView
+            android:id="@+id/widget_artist_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/unknown_artist"
+            android:textColor="#99FFFFFF"
+            android:textSize="10sp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+</RelativeLayout>

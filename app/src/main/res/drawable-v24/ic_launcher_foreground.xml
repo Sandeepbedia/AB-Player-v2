@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Vibrant Gradient Circle -->
+    <path
+        android:pathData="M54,54m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="18"
+                android:startY="18"
+                android:endX="90"
+                android:endY="90">
+
+                <!-- Deep Blue -->
+                <item
+                    android:offset="0.0"
+                    android:color="#1E3CFF"/>
+
+                <!-- Vibrant Magenta -->
+                <item
+                    android:offset="0.55"
+                    android:color="#D81BFF"/>
+
+                <!-- Soft Peach -->
+                <item
+                    android:offset="1.0"
+                    android:color="#FFD1B5"/>
+
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- White Rounded Play Button -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,38
+                          Q45,35 48,37
+                          L70,51
+                          Q74,54 70,57
+                          L48,71
+                          Q45,73 45,70
+                          Z"/>
+</vector>

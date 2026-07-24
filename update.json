@@ -1,0 +1,14 @@
+{
+  "version_name": "2.7.7",
+  "version_code": 427,
+  "release_notes": "App version bumped to 2.7.7 (codename 427)",
+  "changelog": [
+    "Added full app support for Landscape mode",
+    "Added Custom RGB Color Picker",
+    "Killed many bugs and improved overall stability",
+    "Enjoy my new update guys!",
+    "App version bumped to 2.7.7 (codename 427)"
+  ],
+  "apk_url": "https://github.com/Sandeepbedia/AB-Music/releases/download/v2.7.7/ABMusic-v2.7.7.apk",
+  "force_update": false
+}
